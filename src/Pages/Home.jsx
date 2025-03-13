@@ -3,7 +3,7 @@ import { assets } from "../assets/assets";
 import ServiceCard from '../Components/ServiceCard'
 import ChooseUs from '../Components/ChooseUs'
 import EnquiryForm from "../Components/EnquiryForm";
-import { servicesData } from '../__mocks__data/serviceData'
+import { servicesData } from '../__mocks__data/ServiceData'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 
