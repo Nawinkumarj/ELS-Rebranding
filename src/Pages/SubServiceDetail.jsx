@@ -1,6 +1,6 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { servicesData } from "../__mocks__data/serviceData";
+import { servicesData } from "../__mocks__data/ServiceData";
 
 const SubServiceDetail = () => {
   const { serviceUrl, subServiceUrl } = useParams();
