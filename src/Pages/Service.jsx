@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import Banner from "../Components/Banner";
 import ServiceSection from "../Components/ServiceSection";
 import { assets } from "../assets/assets";
-import { servicesData } from "../__mocks__data/ServiceData";
+import { ServicesData } from "../__mocks__data/ServiceData";
 
 const Service = () => {
   const { serviceUrl } = useParams(); // Get dynamic URL param
@@ -11,18 +11,18 @@ const Service = () => {
 
   // Find the selected service based on the URL
   const initialService =
-    servicesData.find((service) => service.url === serviceUrl) ||
-    servicesData[0];
+    ServicesData.find((service) => service.url === serviceUrl) ||
+    ServicesData[0];
 
   const [selectedService, setSelectedService] = useState(initialService);
 
   useEffect(() => {
     if (!serviceUrl) {
       // If no service URL, navigate to the first service URL
-      navigate(`/services/${servicesData[0].url}`, { replace: true });
+      navigate(`/services/${ServicesData[0].url}`, { replace: true });
     } else {
       // Update state when URL changes
-      const newService = servicesData.find(
+      const newService = ServicesData.find(
         (service) => service.url === serviceUrl
       );
       if (newService) setSelectedService(newService);
@@ -56,7 +56,7 @@ const Service = () => {
         </div>
         <div className="service-bottom">
           <div className="service-list">
-            {servicesData.map((service) => (
+            {ServicesData.map((service) => (
               <div
                 className="service-title"
                 key={service.id}

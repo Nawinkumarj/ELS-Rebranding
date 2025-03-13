@@ -3,7 +3,7 @@ import { assets } from "../assets/assets";
 import ServiceCard from '../Components/ServiceCard'
 import ChooseUs from '../Components/ChooseUs'
 import EnquiryForm from "../Components/EnquiryForm";
-import { servicesData } from '../__mocks__data/ServiceData'
+import { ServicesData } from '../__mocks__data/ServiceData'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 
@@ -88,7 +88,7 @@ const Home = () => {
       <h1 ref={textRevealRef} className="sectionTitle">OUR LEGAL PRACTICE AREAS</h1>
 
       <div className="homeServiceCard">
-      {servicesData.map((service) => (
+      {ServicesData.map((service) => (
         <ServiceCard key={service.id} serviceName={service.name} />
       ))}
     </div>

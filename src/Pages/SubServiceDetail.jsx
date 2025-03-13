@@ -1,12 +1,12 @@
 import React from "react";
 import { useParams } from "react-router-dom";
-import { servicesData } from "../__mocks__data/ServiceData";
+import { ServicesData } from "../__mocks__data/ServiceData";
 
 const SubServiceDetail = () => {
   const { serviceUrl, subServiceUrl } = useParams();
 
   // Find the main service using `url` instead of `id`
-  const service = servicesData.find((service) => service.url === serviceUrl);
+  const service = ServicesData.find((service) => service.url === serviceUrl);
 
   // Find the sub-service using `url`
   const subService = service?.subServices.find(
