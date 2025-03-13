@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import Banner from "../Components/Banner";
 import ServiceSection from "../Components/ServiceSection";
 import { assets } from "../assets/assets";
-import { servicesData } from "../__mocks__data/serviceData";
+import { servicesData } from "../__mocks__data/ServiceData";
 
 const Service = () => {
   const { serviceUrl } = useParams(); // Get dynamic URL param
