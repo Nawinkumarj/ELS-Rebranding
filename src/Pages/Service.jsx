@@ -3,7 +3,7 @@ import { useNavigate, useParams } from "react-router-dom";
 import Banner from "../Components/Banner";
 import ServiceSection from "../Components/ServiceSection";
 import { assets } from "../assets/assets";
-import { ServicesData } from "../__mocks__data/ServiceData";
+import { ServicesData } from "../__mocks__data/ServiceData.js";
 
 const Service = () => {
   const { serviceUrl } = useParams(); // Get dynamic URL param
@@ -34,8 +34,8 @@ const Service = () => {
     <div className="service-container">
       <Banner
         bannerImg={assets.Bannerbg}
-        heading={"Service"}
-        content={"Lorem, ipsum dolor sit amet consectetur adipisicing elit.Explicabo recusandae est blanditiis aliquam, op"}
+        heading={selectedService.name}
+        content={selectedService.description}
       />
       <div className="service-main">
         <div className="service-top">

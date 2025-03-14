@@ -9,7 +9,10 @@ import ServiceCard_Img from "./ServiceCard_Img.svg";
 import journey from "./TIMELINE.svg";
 import sample from "./sample.jpeg";
 import about_Img from "./about_Img.svg";
-import ContactBG from './ContactBG.svg'
+import ContactBG from './ContactBG.svg';
+import subService_1 from "./subservice-1.svg";
+import subService_2 from "./subservice-2.svg";
+import dropdownBG from "./dropdownBG.svg";
 
 
 // Video
@@ -35,12 +38,19 @@ import LocationIcon from "./location.svg";
 import PaperImg from "./paper.svg";
 import HammerImg from "./hammer.svg";
 import ImgPaper from "./Imgpaper.svg";
+import EmailArrow from "./Emailarrow.svg";
+import GoastImg from "./GoastImg.svg";
 
 // Icon
 import chooseUs_Icon1 from './chooseUs_Icon1.svg'
 import chooseUs_Icon2 from './chooseUs_Icon2.svg'
 import chooseUs_Icon3 from './chooseUs_Icon3.svg'
 import chooseUs_Icon4 from './chooseUs_Icon4.svg'
+import stickyArrow_icon from './stickyArrow_icon.svg'
+import WhatsApp_icon from './WhatsApp_icon.svg'
+import robot_icon from './robot_icon.svg'
+import subService_icon from './subservice-icon.svg'
+import dropdown_icon from './dropdown_icon.svg'
 
 // Careers
 import Careers from "./career.svg";
@@ -70,11 +80,13 @@ export const assets = {
   about_Img,
   FaceBook,
   CallIcon,
+  EmailArrow,
   EmailIcon,
   InstagramIcon,
   LinkedinIcon,
   LocationIcon,
   PaperImg,
+  GoastImg,
   HammerImg,
   ContactBG,
   linkedin,
@@ -92,4 +104,12 @@ export const assets = {
   Team8,
   logoBranding,
   Careers,
+  stickyArrow_icon,
+  WhatsApp_icon,
+  robot_icon,
+  subService_1,
+  subService_icon,
+  subService_2,
+  dropdown_icon,
+  dropdownBG,
 };

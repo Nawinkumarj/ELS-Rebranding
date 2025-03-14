@@ -1,7 +1,8 @@
 import { useEffect, useRef } from "react";
-import { TeamData } from '../__mocks__data/TeamData'
+import { TeamData } from '../__mocks__data/TeamData.js'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
+import LangSpoken from '../Components/LangSpoken';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -10,6 +11,7 @@ const Ourteam = () => {
   const containerRef = useRef(null);
   const h1Ref = useRef(null);
   const h2Ref = useRef(null);
+  const pRef = useRef(null);
   const boxRef = useRef(null);
 
   useEffect(() => {
@@ -18,29 +20,34 @@ const Ourteam = () => {
         trigger: containerRef.current,
         start: "top 10%",
         end: "+=600",
-        scrub: true,
+        scrub: 3,
         pin: true
       }
     });
 
+    tl.to(pRef.current, {
+      opacity: 0,
+    })
+
     tl.to(h1Ref.current, { 
-      x: "-40vw", 
-      y: "-10vh", 
-      scale: 0.8 
+      x: "-42vw", 
+      y: "-25vh",
+      scale: 0.8,
     })
     .to(h2Ref.current, { 
-      x: "40vw", 
+      x: "42vw", 
       y: "40vh", 
       scale: 0.8 
     }, "<")
     .fromTo(boxRef.current, 
       { scale: 0, opacity: 0 }, 
-      { scale: 1, opacity: 1, duration: 1, y: 150 }
-    ).fromTo(
-      '.team-container',
-      {backgroundColor: '#fff'},
-      {backgroundColor: '#0000002c'}
+      { scale: 1, opacity: 1, duration: 1 }
     )
+    .to(
+      '.team-container',
+      { backgroundColor: '#0000002c' }
+    )
+    .to([h1Ref.current, h2Ref.current], { opacity: 0, duration: 0.5 }, "-=0.1");
 
   }, []);
 
@@ -49,9 +56,9 @@ const Ourteam = () => {
     <div ref={containerRef} className="team-container">
 
     <div className="team-heading">
-        <h2 ref={h1Ref}  className='teamText'>Team of</h2>
+        <h2 ref={h1Ref}>Team of</h2>
         <h2  ref={h2Ref}>experts</h2>
-        <p>Our team is working everyday to build a better world & help ensure you get the best services</p>
+        <p ref={pRef}>Our team is working everyday to build a better world & help ensure you get the best services</p>
       </div>
 
       <div ref={boxRef} className="team-members-cards">
@@ -72,6 +79,9 @@ const Ourteam = () => {
         ))}
       </div>
     </div>
+
+    <LangSpoken />
+
     </>
   )
 }

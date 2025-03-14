@@ -3,7 +3,8 @@ import { assets } from "../assets/assets";
 import ServiceCard from '../Components/ServiceCard'
 import ChooseUs from '../Components/ChooseUs'
 import EnquiryForm from "../Components/EnquiryForm";
-import { ServicesData } from '../__mocks__data/ServiceData'
+import CookiesPopup from "../Components/CookiesPopup";
+import { ServicesData } from '../__mocks__data/ServiceData.js'
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import gsap from "gsap";
 
@@ -119,6 +120,8 @@ const Home = () => {
     <h1 className="sectionTitle">ENQUIRY FORM</h1>
 
     <EnquiryForm />
+
+    <CookiesPopup />
 
     </div>
   );

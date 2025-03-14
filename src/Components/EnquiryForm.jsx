@@ -110,10 +110,10 @@ const EnquiryForm = () => {
         </div>
 
         <div className="confirmCheckBox">
-          <div class="content">
-            <label class="checkBox">
+          <div className="content">
+            <label className="checkBox">
               <input type="checkbox" id="ch1" />
-              <div class="transition"></div>
+              <div className="transition"></div>
             </label>
           </div>
           <p>

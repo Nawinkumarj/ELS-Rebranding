@@ -1,10 +1,78 @@
-import React from "react";
+import {useState} from "react";
 import { assets } from "../assets/assets";
 import Banner from "../Components/Banner";
 const Contact = () => {
+
+  const [formData, setFormData] = useState({
+    firstName: "",
+    lastName: "",
+    phone: "",
+    email: "",
+    message: "",
+  });
+
+  const [errors, setErrors] = useState({});
+
+  const validateEmail = (email) => {
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  };
+
+  const validatePhone = (phone) => {
+    return /^[0-9]{10}$/.test(phone);
+  };
+
+  const validateName = (name) => {
+    return /^[A-Za-z]+$/.test(name);
+  };
+
+  const handleChange = (e) => {
+    setFormData({ ...formData, [e.target.name]: e.target.value });
+    setErrors({ ...errors, [e.target.name]: "" }); 
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    let newErrors = {};
+
+    if (!formData.firstName.trim() || !validateName(formData.firstName)) {
+      newErrors.firstName = "Valid first name is required";
+    }
+
+    if (!formData.lastName.trim() || !validateName(formData.lastName)) {
+      newErrors.lastName = "Valid last name is required";
+    }
+
+    if (!formData.phone.trim() || !validatePhone(formData.phone)) {
+      newErrors.phone = "Enter a valid 10-digit phone number";
+    }
+
+    if (!formData.email.trim() || !validateEmail(formData.email)) {
+      newErrors.email = "Enter a valid email address";
+    }
+
+    if (!formData.message.trim() || formData.message.length < 10) {
+      newErrors.message = "Message must be at least 10 characters long";
+    }
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+
+    // Form submission logic
+    console.log("Form submitted:", formData);
+    setFormData({
+      firstName: "",
+      lastName: "",
+      phone: "",
+      email: "",
+      message: "",
+    });
+
+  };
   return (
     <>
-      <Banner  bannerImg={assets.Bannerbg} />
+      <Banner bannerImg={assets.Bannerbg} />
       <div className="wrapper">
         <div className="info-section">
           <div className="info-item">
@@ -65,9 +133,9 @@ const Contact = () => {
           </h1>
           <div className="email-box">
             <span className="email-icon">
-              <img src={assets.EmailIcon} alt="" />
+              <img src={assets.EmailArrow} alt="" />
             </span>
-            <p>elslegalweb@gmail.com</p>
+            <p>info@exchangelegalservices.com</p>
           </div>
         </div>
 
@@ -81,23 +149,61 @@ const Contact = () => {
               alt="Paper Effect"
               className="paper-bg"
             />
-            <form className="legal-form">
+            <form className="legal-form" onSubmit={handleSubmit}>
               <div className="double-input">
                 <div className="input-box">
-                  <input type="text" placeholder="Enter name" />
+                  <input
+                    type="text"
+                    name="firstName"
+                    placeholder="First Name"
+                    value={formData.firstName}
+                    onChange={handleChange}
+                  />
+                  {errors.firstName && (
+                    <p className="error">{errors.firstName}</p>
+                  )}
                 </div>
                 <div className="input-box">
-                  <input type="text" placeholder="Enter name" />
+                  <input
+                    type="text"
+                    name="lastName"
+                    placeholder="Last Name"
+                    value={formData.lastName}
+                    onChange={handleChange}
+                  />
+                  {errors.lastName && (
+                    <p className="error">{errors.lastName}</p>
+                  )}
                 </div>
               </div>
               <div className="input-box">
-                <input type="text" placeholder="Enter name" />
+                <input
+                  type="text"
+                  name="phone"
+                  placeholder="Phone Number"
+                  value={formData.phone}
+                  onChange={handleChange}
+                />
+                {errors.phone && <p className="error">{errors.phone}</p>}
               </div>
               <div className="input-box">
-                <input type="text" placeholder="Enter name" />
+                <input
+                  type="email"
+                  name="email"
+                  placeholder="Email"
+                  value={formData.email}
+                  onChange={handleChange}
+                />
+                {errors.email && <p className="error">{errors.email}</p>}
               </div>
               <div className="input-box">
-                <input type="text" placeholder="Enter name" />
+                <textarea
+                  name="message"
+                  placeholder="Your Message"
+                  value={formData.message}
+                  onChange={handleChange}
+                />
+                {errors.message && <p className="error">{errors.message}</p>}
               </div>
               <button type="submit" className="submit-btn">
                 SUBMIT

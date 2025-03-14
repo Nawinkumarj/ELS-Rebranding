@@ -1,6 +1,7 @@
 import React from "react";
 import { assets } from "../assets/assets";
 import { Link } from "react-router-dom";
+import SRABadge from "./SRABadge";
 
 const Footer = () => {
   return (
@@ -48,7 +49,7 @@ const Footer = () => {
               <img src={assets.logo} />
             </div>
             <div className="footer-section2-certificate">
-              <img src={assets.logo} />
+             <SRABadge/>
             </div>
           </div>
           <div className="footer-section3">
