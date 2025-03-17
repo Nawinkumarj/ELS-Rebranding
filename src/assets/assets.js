@@ -13,6 +13,8 @@ import ContactBG from './ContactBG.svg';
 import subService_1 from "./subservice-1.svg";
 import subService_2 from "./subservice-2.svg";
 import dropdownBG from "./dropdownBG.svg";
+import subService_bg1 from "./subservice-bg1.svg"
+// import navListBG from "./navListBG.svg";
 
 
 // Video
@@ -50,6 +52,7 @@ import stickyArrow_icon from './stickyArrow_icon.svg'
 import WhatsApp_icon from './WhatsApp_icon.svg'
 import robot_icon from './robot_icon.svg'
 import subService_icon from './subservice-icon.svg'
+import subService_icon2 from "./subservice-icon2.svg";
 import dropdown_icon from './dropdown_icon.svg'
 
 // Careers
@@ -112,4 +115,6 @@ export const assets = {
   subService_2,
   dropdown_icon,
   dropdownBG,
+  subService_bg1,
+  subService_icon2,
 };

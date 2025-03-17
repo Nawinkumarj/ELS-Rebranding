@@ -2,7 +2,7 @@ import React from "react";
 import { useParams } from "react-router-dom";
 import { ServicesData } from "../__mocks__data/ServiceData";
 import { assets } from "../assets/assets";
-import Banner from "../Components/Banner"
+import Banner from "../Components/Banner";
 
 const SubServiceDetail = () => {
   const { serviceUrl, subServiceUrl } = useParams();
@@ -143,8 +143,6 @@ const SubServiceDetail = () => {
                   </div>
                 </div>
               </div>
-
-             
             </div>
             <div className="sect2-content-r">
               <div className="sect2-content-r-img">
@@ -176,9 +174,21 @@ const SubServiceDetail = () => {
                 </div>
               </div>
 
-                <div className="sect3-r-list2">
+              <div className="sect3-r-list2">
                 <div className="sect3-r-list1-number">
-                  <p>01</p>
+                  <p>02</p>
+                </div>
+                <div className="sect3-r-list1-content">
+                  <p>
+                    We take a compassionate and client-centric approach to
+                    contentious divorce.
+                  </p>
+                </div>
+              </div>
+
+              <div className="sect3-r-list3">
+                <div className="sect3-r-list1-number">
+                  <p>03</p>
                 </div>
                 <div className="sect3-r-list1-content">
                   <p>
@@ -188,6 +198,27 @@ const SubServiceDetail = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </div>
+
+      <div className="subservice-section4">
+        <div className="subservice-section4-content">
+
+        </div>
+      </div>
+
+      <div className="subservice-section5">
+        <div className="subservice-section5-contact">
+          <div className="section5-contact-head">
+            <h1>Contact us</h1>
+          </div>
+          <div className="section5-contact-content">
+            <p>
+              <span className="section5-quotation1">&#10077;</span>If you’re
+              facing a contentious divorce, don’t hesitate to reach out to us.
+              <span className="section5-quotation">&#10078;</span>
+            </p>
           </div>
         </div>
       </div>

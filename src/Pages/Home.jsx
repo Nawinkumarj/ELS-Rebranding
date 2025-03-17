@@ -119,7 +119,7 @@ const Home = () => {
 
     <h1 className="sectionTitle">ENQUIRY FORM</h1>
 
-    <EnquiryForm />
+    {/* <EnquiryForm /> */}
 
     <CookiesPopup />
 

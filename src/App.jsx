@@ -15,11 +15,13 @@ import StickyIcon from "./Components/StickyIcon";
 import Careers from "./Pages/Careers";
 import Ourteam from "./Pages/Ourteam";
 import Error404 from "./Pages/Error404";
+import ScrollToTop from "./Components/ScrollToTop";
 
 
 const App = () => {
   return (
     <div>
+      <ScrollToTop />
       <Navbar />
       <StickyIcon />
       <Routes>
@@ -38,6 +40,7 @@ const App = () => {
         <Route path="/our-team" element={<Ourteam />} />
         <Route path='*' element={<Error404 />} />
       </Routes>
+      <EnquiryForm />
       <Footer />
     </div>
   );
