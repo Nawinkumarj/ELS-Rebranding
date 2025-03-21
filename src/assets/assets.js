@@ -12,15 +12,18 @@ import about_Img from "./about_Img.svg";
 import ContactBG from './ContactBG.svg';
 import subService_1 from "./subservice-1.svg";
 import subService_2 from "./subservice-2.svg";
+import subService_3 from "./subservice-3.svg";
 import dropdownBG from "./dropdownBG.svg";
 import subService_bg1 from "./subservice-bg1.svg"
+import journeyPathSm from "./journeyPathSmall.svg"
 // import navListBG from "./navListBG.svg";
 
 
 // Video
-import Hero_Video from "./Hero_Video.mp4"
+import Hero_Video from "./mainvideo.mp4"
 
 // Team
+import elsteam from"./els_team.jpg"
 import Team1 from "./t-1.jpg";
 import Team2 from "./t-2.jpg";
 import Team3 from "./t-3.jpg";
@@ -97,6 +100,7 @@ export const assets = {
   insta,
   fb,
   twitter,
+  elsteam,
   Team1,
   Team2,
   Team3,
@@ -113,8 +117,10 @@ export const assets = {
   subService_1,
   subService_icon,
   subService_2,
+  subService_3,
   dropdown_icon,
   dropdownBG,
   subService_bg1,
   subService_icon2,
+  journeyPathSm,
 };

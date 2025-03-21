@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 import SRABadge from "./SRABadge";
 
 const Footer = () => {
+
+  const year = new Date().getFullYear();
+
   return (
     <div className="footer-container">
       <div className="footer-main">
@@ -24,10 +27,12 @@ const Footer = () => {
               </div>
             </div>
             <div className="footer-section1-email">
-              <p>info@exchangelegalservices.com</p>
+                <a href="mailto:info@exchangelegalservices.com">
+                  info@exchangelegalservices.com
+                </a>
             </div>
             <div className="footer-section1-phone">
-              <p>+44 (0) 203 149 8488</p>
+              <a href="tel:+44 (0) 203 149 8488">+44 (0) 203 149 8488</a>
             </div>
             <div className="footer-section1-icons">
               <div className="footer-icons">
@@ -49,15 +54,12 @@ const Footer = () => {
               <img src={assets.logo} />
             </div>
             <div className="footer-section2-certificate">
-             <SRABadge/>
+              <SRABadge />
             </div>
           </div>
           <div className="footer-section3">
             <Link to="/services/family-law" className="footer-link">
               <div className="footer-section3-list">
-                <div className="list-count">
-                  <p>01</p>
-                </div>
                 <div className="list-name">
                   <h1>legal service</h1>
                   <h1>legal service</h1>
@@ -67,9 +69,6 @@ const Footer = () => {
 
             <Link to="/about-us" className="footer-link">
               <div className="footer-section3-list">
-                <div className="list-count">
-                  <p>02</p>
-                </div>
                 <div className="list-name">
                   <h1>about us</h1>
                   <h1>about us</h1>
@@ -79,9 +78,6 @@ const Footer = () => {
 
             <Link to="/our-team" className="footer-link">
               <div className="footer-section3-list">
-                <div className="list-count">
-                  <p>03</p>
-                </div>
                 <div className="list-name">
                   <h1>our teams</h1>
                   <h1>our teams</h1>
@@ -91,9 +87,6 @@ const Footer = () => {
 
             <Link to="/contact-us" className="footer-link">
               <div className="footer-section3-list">
-                <div className="list-count">
-                  <p>04</p>
-                </div>
                 <div className="list-name">
                   <h1>contact us</h1>
                   <h1>contact us</h1>
@@ -103,9 +96,6 @@ const Footer = () => {
 
             <Link to="/careers" className="footer-link">
               <div className="footer-section3-list">
-                <div className="list-count">
-                  <p>05</p>
-                </div>
                 <div className="list-name">
                   <h1>careers</h1>
                   <h1>careers</h1>
@@ -115,9 +105,6 @@ const Footer = () => {
 
             <Link to="/faqs" className="footer-link">
               <div className="footer-section3-list">
-                <div className="list-count">
-                  <p>06</p>
-                </div>
                 <div className="list-name">
                   <h1>faq</h1>
                   <h1>faq</h1>
@@ -129,12 +116,7 @@ const Footer = () => {
 
         <div className="footer-bottom">
           <div className="footer-bottom-section1">
-            <p>Copyrights©2025</p>
-          </div>
-          <div className="footer-bottom-section2">
-            <div className="footer-bottom-logo">
-              <img src={assets.logoBranding} />
-            </div>
+            <p>Copyrights©{year}</p>
           </div>
           <div className="footer-bottom-section3">
             <div className="footer-bottom-section3-content">

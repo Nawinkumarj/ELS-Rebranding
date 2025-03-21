@@ -1,5 +1,5 @@
 import { assets } from "../assets/assets";
-import ImageTrail from "../lib/ImageTrail";
+import useChangeColor from "../Hooks/useChangeColor";
 
 const chooseUsData = [
   {
@@ -25,24 +25,14 @@ const chooseUsData = [
 ];
 
 const ChooseUs = () => {
+
+  const colorRefs = useChangeColor();
+
   return (
     <div className="chooseUsContainer">
-      <h1 className="sectionTitle">Why Choose Exchange Legal Services?</h1>
-      {chooseUsData.map((item, index) => (
-        <div className="chooseUsList flex-center"  key={index}>
-          <div className="hoverimg">
-            <ImageTrail
-              key="ImageTrail"
-              items={[
-                "https://cdn.pixabay.com/photo/2024/05/09/19/16/ai-generated-8751655_1280.jpg",
-                "https://cdn.pixabay.com/photo/2024/05/09/19/16/ai-generated-8751655_1280.jpg",
-                "https://cdn.pixabay.com/photo/2024/05/09/19/16/ai-generated-8751655_1280.jpg",
-                "https://cdn.pixabay.com/photo/2024/05/09/19/16/ai-generated-8751655_1280.jpg",
-                "https://cdn.pixabay.com/photo/2024/05/09/19/16/ai-generated-8751655_1280.jpg",
-              ]}
-              variant={2}
-            />
-          </div>
+      <h1 ref={(el) => (colorRefs.current[0] = el)} className="sectionTitle">Why Choose Exchange Legal Services?</h1>
+      {chooseUsData.map((item, choose) => (
+        <div className="chooseUsList flex-center"  key={choose}>
           <div className="leftside flex-center">
             <img src={item.icon} alt={item.title} />
             <h3>{item.title}</h3>

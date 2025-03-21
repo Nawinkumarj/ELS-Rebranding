@@ -1,51 +1,57 @@
 import React from "react";
 import { assets } from "../assets/assets";
 import { useNavigate } from "react-router-dom";
+import useChangeColor from "../Hooks/useChangeColor.jsx";
+import useScrollReveal from "../Hooks/UseScrollReveal.jsx";
 
 const ServiceSection = ({ selectedService }) => {
+
   const navigate = useNavigate();
+  const revealRefs = useScrollReveal();
+  const colorRefs = useChangeColor();
   
 
   return (
     <div className="serviceSection-container">
       <div className="serviceSection-main">
         <div className="serviceSection-section1">
-          <div className="section1-left">
-            <div className="section1-bgHead">
-              <h1>Services</h1>
-            </div>
+          <div className="section1-bgHead">
+            <h1 ref={(el) => (revealRefs.current[0] = el)}>Services</h1>
+          </div>
 
-            <div className="section1-head">
-              <h1>{selectedService.name.includes("Wills & Probate")
+          <div className="section1-head">
+            <h1 ref={(el) => (colorRefs.current[0] = el)}>
+              {selectedService.name.includes("Wills & Probate")
                 ? "Wills & Probate"
-                : selectedService.name}</h1>
-            </div>
-            <div className="section1-content">
-              <p>
-                {selectedService.description || "More details coming soon..."}
-              </p>
-            </div>
+                : selectedService.name}
+            </h1>
           </div>
-          <div className="section1-right">
-            <div className="section1-right-img">
-              <img src={assets.ServiceMain} alt="Service Main" />
+          <div className="section1-full-content">
+            <div className="section1-left">
+              <div className="section1-content">
+                {selectedService.descriptionList?.length > 0 ? (
+                  selectedService.descriptionList.map((desc, index) => (
+                    <p key={index}>{desc}</p>
+                  ))
+                ) : (
+                  <p>
+                    {selectedService.description ||
+                      "More details coming soon..."}
+                  </p>
+                )}
+              </div>
+            </div>
+            <div className="section1-right">
+              <div className="section1-right-img">
+                <img src={assets.ServiceMain} alt="Service Main" />
+              </div>
             </div>
           </div>
         </div>
-        <div className="serviceSection-section2">
-          <div className="section2-head">
-            <h1>els legal</h1>
-          </div>
-          <div className="section2-video">
-            <video className="video-container" muted width="100%" height="100%">
-              <source src={assets.Hero_Video} type="video/mp4" />
-              Your browser does not support the video tag.
-            </video>
-          </div>
-        </div>
+       
         <div className="serviceSection-section3">
           <div className="section3-bgHead">
-            <h1>
+            <h1 ref={(el) => (revealRefs.current[1] = el)}>
               {selectedService.name.includes("Wills & Probate")
                 ? "Wills & Probate"
                 : selectedService.name}
@@ -53,7 +59,7 @@ const ServiceSection = ({ selectedService }) => {
           </div>
 
           <div className="section3-head">
-            <h1>our service</h1>
+            <h1 ref={(el) => (colorRefs.current[2] = el)}>our service</h1>
           </div>
           <div className="section3-list">
             {selectedService.subServices &&
@@ -73,7 +79,9 @@ const ServiceSection = ({ selectedService }) => {
                       className="section3-readmore"
                       onClick={() =>
                         navigate(
-                          `/services/${selectedService.url}/${encodeURIComponent(subService.url)}`
+                          `/services/${
+                            selectedService.url
+                          }/${encodeURIComponent(subService.url)}`
                         )
                       }
                     >

@@ -1,78 +1,23 @@
-import {useState} from "react";
+
+import React, { useState, useEffect } from "react";
 import { assets } from "../assets/assets";
 import Banner from "../Components/Banner";
+import EnquiryForm from "../Components/EnquiryForm";
 const Contact = () => {
 
-  const [formData, setFormData] = useState({
-    firstName: "",
-    lastName: "",
-    phone: "",
-    email: "",
-    message: "",
-  });
+  const [showMap, setShowMap] = useState(false);
 
-  const [errors, setErrors] = useState({});
-
-  const validateEmail = (email) => {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  };
-
-  const validatePhone = (phone) => {
-    return /^[0-9]{10}$/.test(phone);
-  };
-
-  const validateName = (name) => {
-    return /^[A-Za-z]+$/.test(name);
-  };
-
-  const handleChange = (e) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value });
-    setErrors({ ...errors, [e.target.name]: "" }); 
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    let newErrors = {};
-
-    if (!formData.firstName.trim() || !validateName(formData.firstName)) {
-      newErrors.firstName = "Valid first name is required";
-    }
-
-    if (!formData.lastName.trim() || !validateName(formData.lastName)) {
-      newErrors.lastName = "Valid last name is required";
-    }
-
-    if (!formData.phone.trim() || !validatePhone(formData.phone)) {
-      newErrors.phone = "Enter a valid 10-digit phone number";
-    }
-
-    if (!formData.email.trim() || !validateEmail(formData.email)) {
-      newErrors.email = "Enter a valid email address";
-    }
-
-    if (!formData.message.trim() || formData.message.length < 10) {
-      newErrors.message = "Message must be at least 10 characters long";
-    }
-
-    if (Object.keys(newErrors).length > 0) {
-      setErrors(newErrors);
-      return;
-    }
-
-    // Form submission logic
-    console.log("Form submitted:", formData);
-    setFormData({
-      firstName: "",
-      lastName: "",
-      phone: "",
-      email: "",
-      message: "",
-    });
-
-  };
+  useEffect(() => {
+    setShowMap(true);
+  }, []);
+  
   return (
     <>
-      <Banner bannerImg={assets.Bannerbg} />
+      <Banner
+        bannerImg={assets.Bannerbg}
+        heading="contact us"
+        content="lorem"
+      />
       <div className="wrapper">
         <div className="info-section">
           <div className="info-item">
@@ -94,29 +39,39 @@ const Contact = () => {
         </div>
         <div className="social-section">
           <div className="social-box">
-            <img
-              src={assets.InstagramIcon}
-              alt="Instagram"
-              className="social-logo"
-            />
+            <div className="social-logo">
+              <img
+                src={assets.InstagramIcon}
+                alt="Instagram"
+                className="social-logo-img"
+              />
+            </div>
             <div className="social-content">
               <span className="social-title">Instagram</span>
               <p className="social-desc">Lorem ipsum text</p>
             </div>
           </div>
           <div className="social-box right-icon">
-            <img src={assets.FaceBook} alt="Facebook" className="social-logo" />
+            <div className="social-logo">
+              <img
+                src={assets.FaceBook}
+                alt="Instagram"
+                className="social-logo-img"
+              />
+            </div>
             <div className="social-content">
               <span className="social-title">Facebook</span>
-              <p className="social-desc">Lorem ipsum text</p>
+              <p className="social-desc">Lorem ipstext</p>
             </div>
           </div>
           <div className="social-box">
-            <img
-              src={assets.LinkedinIcon}
-              alt="LinkedIn"
-              className="social-logo"
-            />
+            <div className="social-logo">
+              <img
+                src={assets.LinkedinIcon}
+                alt="Instagram"
+                className="social-logo-img"
+              />
+            </div>
             <div className="social-content">
               <span className="social-title">Linkedin</span>
               <p className="social-desc">Lorem ipsum text</p>
@@ -124,102 +79,21 @@ const Contact = () => {
           </div>
         </div>
       </div>
-      {/* Form Section */}
-      <div className="legal-form-wrapper">
-        <div className="header-section">
-          <h1>
-            LET’S TALK <br />
-            <span>WITH US</span>
-          </h1>
-          <div className="email-box">
-            <span className="email-icon">
-              <img src={assets.EmailArrow} alt="" />
-            </span>
-            <p>info@exchangelegalservices.com</p>
-          </div>
-        </div>
 
-        {/* Main Content Section */}
-        <div className="content-section">
-          <img src={assets.HammerImg} alt="Gavel" className="gavel-image" />
+     <EnquiryForm />
 
-          <div className="form-container">
-            <img
-              src={assets.ImgPaper}
-              alt="Paper Effect"
-              className="paper-bg"
-            />
-            <form className="legal-form" onSubmit={handleSubmit}>
-              <div className="double-input">
-                <div className="input-box">
-                  <input
-                    type="text"
-                    name="firstName"
-                    placeholder="First Name"
-                    value={formData.firstName}
-                    onChange={handleChange}
-                  />
-                  {errors.firstName && (
-                    <p className="error">{errors.firstName}</p>
-                  )}
-                </div>
-                <div className="input-box">
-                  <input
-                    type="text"
-                    name="lastName"
-                    placeholder="Last Name"
-                    value={formData.lastName}
-                    onChange={handleChange}
-                  />
-                  {errors.lastName && (
-                    <p className="error">{errors.lastName}</p>
-                  )}
-                </div>
-              </div>
-              <div className="input-box">
-                <input
-                  type="text"
-                  name="phone"
-                  placeholder="Phone Number"
-                  value={formData.phone}
-                  onChange={handleChange}
-                />
-                {errors.phone && <p className="error">{errors.phone}</p>}
-              </div>
-              <div className="input-box">
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="Email"
-                  value={formData.email}
-                  onChange={handleChange}
-                />
-                {errors.email && <p className="error">{errors.email}</p>}
-              </div>
-              <div className="input-box">
-                <textarea
-                  name="message"
-                  placeholder="Your Message"
-                  value={formData.message}
-                  onChange={handleChange}
-                />
-                {errors.message && <p className="error">{errors.message}</p>}
-              </div>
-              <button type="submit" className="submit-btn">
-                SUBMIT
-              </button>
-            </form>
-          </div>
-        </div>
-      </div>
-      <div className="map-container">
-        <iframe
-          src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d1221.769086496135!2d-0.2560996970060974!3d51.657898820870805!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487617243bc26fc3%3A0x63573796ad554ad9!2sExchange%20Legal%20Services!5e0!3m2!1sen!2sin!4v1741865818881!5m2!1sen!2sin"
-          style={{ border: "0" }}
-          allowfullscreen=""
-          loading="lazy"
-          referrerpolicy="no-referrer-when-downgrade"
-        ></iframe>
+     <div className="map-container">
+        {showMap && (
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2475.083487285188!2d-0.2554823!3d51.658307799999996!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x487617243bc26fc3%3A0x63573796ad554ad9!2sExchange%20Legal%20Services!5e0!3m2!1sen!2sin!4v1742283479424!5m2!1sen!2sin"
+            width="600"
+            height="450"
+            style={{ border: "0" }}
+            allowFullScreen=""
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          ></iframe>
+        )}
       </div>
     </>
   );

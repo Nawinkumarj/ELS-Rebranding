@@ -1,29 +1,32 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
 import Navbar from "./Components/Navbar";
-import Home from './Pages/Home'
-import Faq from './Pages/Faq'
-import Service from "./Pages/Service"
+import Home from "./Pages/Home";
+import Faq from "./Pages/Faq";
+import Service from "./Pages/Service";
 import About from "./Pages/About";
 import Cookies from "./Pages/Cookies";
 import PrivacyPolicy from "./Pages/PrivacyPolicy";
 import SubServiceDetail from "./Pages/SubServiceDetail";
 import Contact from "./Pages/Contact";
 import Footer from "./Components/Footer";
-import EnquiryForm from "./Components/EnquiryForm";
-import StickyIcon from "./Components/StickyIcon";
 import Careers from "./Pages/Careers";
 import Ourteam from "./Pages/Ourteam";
 import Error404 from "./Pages/Error404";
 import ScrollToTop from "./Components/ScrollToTop";
+import ConstructionPage from "./Pages/ConstructionPage";
 
+const isUnderConstruction = false;
 
 const App = () => {
+  if (isUnderConstruction) {
+    return <ConstructionPage />;
+  }
+
   return (
     <div>
       <ScrollToTop />
       <Navbar />
-      <StickyIcon />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/faqs" element={<Faq />} />
@@ -38,9 +41,8 @@ const App = () => {
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/our-team" element={<Ourteam />} />
-        <Route path='*' element={<Error404 />} />
+        <Route path="*" element={<Error404 />} />
       </Routes>
-      <EnquiryForm />
       <Footer />
     </div>
   );
