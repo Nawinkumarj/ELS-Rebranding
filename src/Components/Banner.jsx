@@ -1,7 +1,7 @@
 import React from "react";
 import { assets } from "../assets/assets";
 
-const Banner = ({ bannerImg, heading, content}) => {
+const Banner = ({ bannerImg, heading, content, button, onButtonClick }) => {
   return (
     <div className="banner-container">
       <div className="banner-main">
@@ -17,12 +17,13 @@ const Banner = ({ bannerImg, heading, content}) => {
               <h1>{heading}</h1>
             </div>
             <div className="banner-content">
-              <p>{content}
-              </p>
+              <p>{content}</p>
             </div>
-            <div className="banner-button">
-              <button>Explore all</button>
-            </div>
+            {button && (
+              <div className="banner-button">
+                <button onClick={onButtonClick}>{button}</button>
+              </div>
+            )}
           </div>
         </div>
       </div>

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import Banner from "../Components/Banner";
 import ServiceSection from "../Components/ServiceSection";
@@ -11,6 +11,7 @@ const Service = () => {
   const { serviceUrl } = useParams(); // Get dynamic URL param
   const navigate = useNavigate();
   const [isOpen, setIsOpen] = useState(false);
+   const serviceSectionRef = useRef(null);
 
   // Find the selected service based on the URL
   const initialService =
@@ -30,12 +31,18 @@ const Service = () => {
     }
   }, [serviceUrl, navigate]);
 
+    const handleExploreClick = () => {
+      serviceSectionRef.current?.scrollIntoView({ behavior: "smooth" });
+    };
+
   return (
     <div className="service-container">
       <Banner
         bannerImg={assets.Bannerbg}
         heading={selectedService.name}
         content={selectedService.description}
+        button="Explore now"
+        onButtonClick={handleExploreClick}
       />
       <div className="service-main">
         <div className="service-top">
@@ -97,7 +104,6 @@ const Service = () => {
               </div>
             </div>
           </div>
-          
 
           <div className="service-section">
             <div className="service-section-head">
@@ -138,7 +144,10 @@ const Service = () => {
             ))}
           </div>
         </div>
-        <ServiceSection selectedService={selectedService} />
+        <ServiceSection
+          selectedService={selectedService}
+          ref={serviceSectionRef}
+        />
       </div>
     </div>
   );

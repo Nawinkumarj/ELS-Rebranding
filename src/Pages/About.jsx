@@ -26,7 +26,11 @@ const About = () => {
 
   return (
     <div className="about-container">
-      <Banner />
+      <Banner
+        bannerImg={assets.Bannerbg}
+        heading="About us"
+        content="description"
+      />
       <h1
         ref={(el) => (colorRefs.current[0] = el)}
         className="about-title title"
@@ -57,7 +61,7 @@ const About = () => {
           </div>
         </div>
         <div className="aboutus-right">
-          <div className="about-rightimg">
+          <div className="about-rightimg flex-center">
             <img src={assets.elsteam} alt="" />
           </div>
         </div>
@@ -111,9 +115,14 @@ const About = () => {
           </div>
         </div>
         <div className="ourJourneyPathSm flex-center">
-          <p ref={(el) => (revealRefs.current[4] = el)}>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore numquam sunt doloremque asperiores voluptas ipsa maxime facilis, consequatur consectetur alias dolores vero sapiente explicabo? Sequi officia dolorem illum accusamus aliquam.</p>
-          <div className='journeyPathImgContainer'>
-            <img src={assets.journeyPathSm} alt="" className='journeyPathImg' />
+          <p ref={(el) => (revealRefs.current[4] = el)}>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Tempore
+            numquam sunt doloremque asperiores voluptas ipsa maxime facilis,
+            consequatur consectetur alias dolores vero sapiente explicabo? Sequi
+            officia dolorem illum accusamus aliquam.
+          </p>
+          <div className="journeyPathImgContainer">
+            <img src={assets.journeyPathSm} alt="" className="journeyPathImg" />
           </div>
         </div>
       </div>

@@ -27,25 +27,49 @@ const Footer = () => {
               </div>
             </div>
             <div className="footer-section1-email">
-                <a href="mailto:info@exchangelegalservices.com">
-                  info@exchangelegalservices.com
-                </a>
+              <a href="mailto:info@exchangelegalservices.com">
+                info@exchangelegalservices.com
+              </a>
             </div>
             <div className="footer-section1-phone">
               <a href="tel:+44 (0) 203 149 8488">+44 (0) 203 149 8488</a>
             </div>
             <div className="footer-section1-icons">
               <div className="footer-icons">
-                <img src={assets.linkedin} />
+                <a
+                  href="https://www.linkedin.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={assets.linkedin} alt="LinkedIn" />
+                </a>
               </div>
               <div className="footer-icons">
-                <img src={assets.insta} />
+                <a
+                  href="https://www.instagram.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={assets.insta} alt="Instagram" />
+                </a>
               </div>
               <div className="footer-icons">
-                <img src={assets.twitter} />
+                <a
+                  href="https://www.twitter.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={assets.twitter} alt="Twitter" />
+                </a>
               </div>
               <div className="footer-icons">
-                <img src={assets.fb} />
+                <a
+                  href="https://www.facebook.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={assets.fb} alt="Facebook" />
+                </a>
               </div>
             </div>
           </div>

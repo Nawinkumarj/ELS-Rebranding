@@ -1,10 +1,10 @@
-import React from "react";
+import React, { forwardRef } from "react";
 import { assets } from "../assets/assets";
 import { useNavigate } from "react-router-dom";
 import useChangeColor from "../Hooks/useChangeColor.jsx";
 import useScrollReveal from "../Hooks/UseScrollReveal.jsx";
 
-const ServiceSection = ({ selectedService }) => {
+const ServiceSection = forwardRef(({ selectedService }, ref)  => {
 
   const navigate = useNavigate();
   const revealRefs = useScrollReveal();
@@ -12,7 +12,7 @@ const ServiceSection = ({ selectedService }) => {
   
 
   return (
-    <div className="serviceSection-container">
+    <div className="serviceSection-container" ref={ref}>
       <div className="serviceSection-main">
         <div className="serviceSection-section1">
           <div className="section1-bgHead">
@@ -48,7 +48,7 @@ const ServiceSection = ({ selectedService }) => {
             </div>
           </div>
         </div>
-       
+
         <div className="serviceSection-section3">
           <div className="section3-bgHead">
             <h1 ref={(el) => (revealRefs.current[1] = el)}>
@@ -98,6 +98,6 @@ const ServiceSection = ({ selectedService }) => {
       </div>
     </div>
   );
-};
+});
 
 export default ServiceSection;

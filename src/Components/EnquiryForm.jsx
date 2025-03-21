@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { assets } from "../assets/assets";
 import countries from "world-countries";
+import { ServicesData } from "../__mocks__data/ServiceData";
 
 const EnquiryForm = () => {
   const [formData, setFormData] = useState({
@@ -70,10 +71,17 @@ const EnquiryForm = () => {
 
   return (
     <div className="enquiryFromContainer">
-      <form onSubmit={handleSubmit} action="#" className="enquiryForm" autoComplete="off">
+      <form
+        onSubmit={handleSubmit}
+        action="#"
+        className="enquiryForm"
+        autoComplete="off"
+      >
         <div className="threeGridForm">
           <div className="fromDiv">
-            <label htmlFor="title">Title <span className="FormMandatory">*</span></label>
+            <label htmlFor="title">
+              Title <span className="FormMandatory">*</span>
+            </label>
             <select
               name="title"
               id="title"
@@ -89,7 +97,9 @@ const EnquiryForm = () => {
             </select>
           </div>
           <div className="fromDiv">
-            <label htmlFor="firstName">First Name <span className="FormMandatory">*</span></label>
+            <label htmlFor="firstName">
+              First Name <span className="FormMandatory">*</span>
+            </label>
             <input
               type="text"
               name="firstName"
@@ -101,7 +111,9 @@ const EnquiryForm = () => {
             {errors.firstName && <p className="error">{errors.firstName}</p>}
           </div>
           <div className="fromDiv">
-            <label htmlFor="lastName">Last Name <span className="FormMandatory">*</span></label>
+            <label htmlFor="lastName">
+              Last Name <span className="FormMandatory">*</span>
+            </label>
             <input
               type="text"
               name="lastName"
@@ -116,7 +128,9 @@ const EnquiryForm = () => {
 
         <div className="twoGridForm">
           <div className="fromDiv">
-            <label htmlFor="email">Email Address <span className="FormMandatory">*</span></label>
+            <label htmlFor="email">
+              Email Address <span className="FormMandatory">*</span>
+            </label>
             <input
               type="email"
               name="email"
@@ -128,7 +142,9 @@ const EnquiryForm = () => {
             {errors.email && <p className="error">{errors.email}</p>}
           </div>
           <div className="fromDiv groupDiv">
-            <label htmlFor="mobile">Phone Number <span className="FormMandatory">*</span></label>
+            <label htmlFor="mobile">
+              Phone Number <span className="FormMandatory">*</span>
+            </label>
             <div className="selectCountry">
               <input
                 type="tel"
@@ -145,7 +161,9 @@ const EnquiryForm = () => {
 
         <div className="oneGridForm">
           <div className="fromDiv">
-            <label htmlFor="service">Select Service <span className="FormMandatory">*</span></label>
+            <label htmlFor="service">
+              Select Service <span className="FormMandatory">*</span>
+            </label>
             <select
               name="service"
               id="service"
@@ -153,11 +171,11 @@ const EnquiryForm = () => {
               onChange={handleInputChange}
             >
               <option value="">Choose a Service</option>
-              <option value="Service 1">Service 1</option>
-              <option value="Service 2">Service 2</option>
-              <option value="Service 3">Service 3</option>
-              <option value="Service 4">Service 4</option>
-              <option value="Service 5">Service 5</option>
+              {ServicesData.map((service) => (
+                <option key={service.is} value={`${service.name}`}>
+                  {service.name}
+                </option>
+              ))}
             </select>
             {errors.service && <p className="error">{errors.service}</p>}
           </div>
@@ -165,7 +183,9 @@ const EnquiryForm = () => {
 
         <div className="oneGridForm">
           <div className="fromDiv">
-            <label htmlFor="message">Message <span className="FormMandatory">*</span></label>
+            <label htmlFor="message">
+              Message <span className="FormMandatory">*</span>
+            </label>
             <textarea
               name="message"
               id="message"
@@ -191,7 +211,8 @@ const EnquiryForm = () => {
             </label>
           </div>
           <p>
-            I am bound by the terms of the service and I accept the privacy policy. <span className="FormMandatory">*</span>
+            I am bound by the terms of the service and I accept the privacy
+            policy. <span className="FormMandatory">*</span>
           </p>
         </div>
         {errors.agree && <p className="error">{errors.agree}</p>}

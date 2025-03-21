@@ -3,7 +3,7 @@ import { assets } from "../assets/assets";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
 import { ServicesData } from "../__mocks__data/ServiceData";
-import EnquiryForm from './EnquiryForm'
+import EnquiryForm from "./EnquiryForm";
 
 const Navbar = () => {
   const navigate = useNavigate();
@@ -18,6 +18,8 @@ const Navbar = () => {
 
   const [showNavbar, setShowNavbar] = useState(true);
   const [lastScrollY, setLastScrollY] = useState(0);
+
+  const [showEnquiryForm, setshowEnquiryForm] = useState(false);
 
   useEffect(() => {
     if (ServicesData.length > 0) {
@@ -47,7 +49,7 @@ const Navbar = () => {
     <>
       <div className="navbarContainer">
         <div className="topBar flex-center">
-          <button>Enquiry Now</button>
+          <button onClick={() => setshowEnquiryForm(true)}>Enquiry Now</button>
           <button>
             <a href="tel:+44 (0) 203 149 8488">+44 (0) 203 149 8488</a>
           </button>
@@ -96,10 +98,10 @@ const Navbar = () => {
                 <div className="dropdownNavList">
                   <div className="leftSide">
                     <div className="navInsideBG">
-                      <img
+                      {/* <img
                         src="https://cdn.pixabay.com/photo/2024/04/06/17/58/ai-generated-8679746_1280.jpg"
                         alt=""
-                      />
+                      /> */}
                     </div>
                     <div className="insideNavList">
                       {ServicesData.map((service) => (
@@ -119,10 +121,10 @@ const Navbar = () => {
                   </div>
                   <div className="rightSide">
                     <div className="navInsideBG">
-                      <img
+                      {/* <img
                         src="https://cdn.pixabay.com/photo/2024/04/06/17/58/ai-generated-8679746_1280.jpg"
                         alt=""
-                      />
+                      /> */}
                     </div>
                     <div className="insideNavList">
                       {activeService &&
@@ -159,6 +161,9 @@ const Navbar = () => {
                         })()}
                     </div>
                   </div>
+                  <p onClick={toggleDropdown} className="dropdownClose">
+                    X
+                  </p>
                 </div>
               </motion.div>
             )}
@@ -248,9 +253,17 @@ const Navbar = () => {
         </AnimatePresence>{" "}
       </div>
 
-      {/* <div className='enquiryFromPopup'>
-        <EnquiryForm  />
-      </div> */}
+      {/* Popup for Enquiry form */}
+      {showEnquiryForm && (
+        <div className="enquiry-modal" onClick={() => setshowEnquiryForm(false)}>
+          <div className="enquiry-content" onClick={(e) => e.stopPropagation()}>
+            <button className="close-btn" onClick={() => setshowEnquiryForm(false)}>
+              <img src={assets.close} alt="" />
+            </button>
+            <EnquiryForm />
+          </div>
+        </div>
+      )}
 
     </>
   );
