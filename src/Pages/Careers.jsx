@@ -20,7 +20,7 @@ const Careers = () => {
           There are no vacancies available for now. For updates- Follow us on{" "}
           <a href="">LinkedIn</a>
         </p>
-        <button className="email-btn">E-mail us</button>
+        <a href='mailto:info@els.legal' className="email-btn">E-mail us</a>
       </div>
     </div>
   );

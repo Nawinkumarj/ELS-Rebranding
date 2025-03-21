@@ -454,6 +454,13 @@
 
 /*  Contact form responsive code */
 
+
+@media screen and (max-width:1280px){
+  .info-section{
+    width:80%;
+  }
+}
+
 @media (max-width: 768px) {
   .wrapper {
     flex-direction: row;

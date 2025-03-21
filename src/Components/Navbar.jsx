@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { assets } from "../assets/assets";
 import { Link, NavLink, useNavigate } from "react-router-dom";
 import { motion, AnimatePresence } from "framer-motion";
@@ -7,6 +7,7 @@ import EnquiryForm from "./EnquiryForm";
 
 const Navbar = () => {
   const navigate = useNavigate();
+  const dropdownRef = useRef(null);
 
   const [isOpen, setIsOpen] = useState(false);
 
@@ -45,6 +46,23 @@ const Navbar = () => {
     setIsOpen(!isOpen);
   };
 
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target)) {
+        setIsOpen(false);
+        setActiveService(null);
+      }
+    };
+
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
+
   return (
     <>
       <div className="navbarContainer">
@@ -82,7 +100,7 @@ const Navbar = () => {
                 animate={{ opacity: 1, y: 0, x: "5%" }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
-                className="serviceDropDownContainer"
+                className="serviceDropDownContainer flex-center"
               >
                 {/* <div className="dropdownBG">
                 <img src={assets.dropdownBG} alt="" />
@@ -95,7 +113,7 @@ const Navbar = () => {
                   </p>
                 </div>
 
-                <div className="dropdownNavList">
+                <div ref={dropdownRef} className="dropdownNavList">
                   <div className="leftSide">
                     <div className="navInsideBG">
                       {/* <img
@@ -107,8 +125,9 @@ const Navbar = () => {
                       {ServicesData.map((service) => (
                         <NavLink
                           key={service.id}
-                          // to={`services/${service.url}`}
-                          onClick={() => setActiveService(service.id)}
+                          to={`services/${service.url}`}
+                          onMouseOver={() => setActiveService(service.id)}
+                          onClick={toggleDropdown}
                           className={` ${
                             activeService === service.id ? "chumma" : ""
                           }`}
@@ -137,14 +156,14 @@ const Navbar = () => {
 
                           return (
                             <>
-                              <NavLink
+                              {/* <NavLink
                                 to={`services/${selectedService.url}`}
                                 className="linkService"
                                 onClick={toggleDropdown}
                               >
                                 <span>&#10140;</span>
                                 <p>{selectedService.name}</p>
-                              </NavLink>
+                              </NavLink> */}
 
                               {selectedService.subServices.map((sub) => (
                                 <NavLink
@@ -161,10 +180,10 @@ const Navbar = () => {
                         })()}
                     </div>
                   </div>
-                  <p onClick={toggleDropdown} className="dropdownClose">
+                </div>
+                <p onClick={toggleDropdown} className="dropdownClose">
                     X
                   </p>
-                </div>
               </motion.div>
             )}
           </AnimatePresence>{" "}
