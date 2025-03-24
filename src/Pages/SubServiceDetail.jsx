@@ -37,16 +37,22 @@ const SubServiceDetail = () => {
         <div className="subservice-section1">
           <div className="subService-sect1-content">
             <div className="subService-content-l">
-              <p ref={(el) => (revealRefs.current[0] = el)}>{subService.subContent1}</p>
+              <p ref={(el) => (revealRefs.current[0] = el)}>
+                {subService.subContent1}
+              </p>
             </div>
             <div className="subService-content-r">
-              <p ref={(el) => (revealRefs.current[1] = el)}>{subService.subContent2}</p>
+              <p ref={(el) => (revealRefs.current[1] = el)}>
+                {subService.subContent2}
+              </p>
             </div>
           </div>
         </div>
         <div className="subservice-section2">
           <div className="sect2-heading">
-            <h1 ref={(el) => (revealRefs.current[2] = el)}>{subService.serviceListHead}</h1>
+            <h1 ref={(el) => (revealRefs.current[2] = el)}>
+              {subService.serviceListHead}
+            </h1>
           </div>
           <div className="sect2-content">
             <div className="sect2-content-l">
@@ -63,7 +69,6 @@ const SubServiceDetail = () => {
                 </div>
               ))}
             </div>
-
           </div>
         </div>
       </div>
@@ -78,36 +83,22 @@ const SubServiceDetail = () => {
               <h1 ref={(el) => (revealRefs.current[3] = el)}>our approch</h1>
             </div>
           </div>
+
           <div className="subservice-sect3-r">
             <div className="sect3-r-list">
-              <div className="sect3-r-list1">
-                <div className="sect3-r-list1-number">
-                  <p>01</p>
+              {subService.approch.map((item, index) => (
+                <div key={index} className={`sect3-r-list${index + 1}`}>
+                  <div className="sect3-r-list1-number">
+                    <p>{`0${index + 1}`}</p>
+                  </div>
+                  <div className="sect3-r-list1-content">
+                    <p>{item}</p>
+                  </div>
                 </div>
-                <div className="sect3-r-list1-content">
-                  <p>{subService.approch1}</p>
-                </div>
-              </div>
-
-              <div className="sect3-r-list2">
-                <div className="sect3-r-list1-number">
-                  <p>02</p>
-                </div>
-                <div className="sect3-r-list1-content">
-                  <p>{subService.approch2}</p>
-                </div>
-              </div>
-
-              <div className="sect3-r-list3">
-                <div className="sect3-r-list1-number">
-                  <p>03</p>
-                </div>
-                <div className="sect3-r-list1-content">
-                  <p>{subService.approch3}</p>
-                </div>
-              </div>
+              ))}
             </div>
           </div>
+          
         </div>
       </div>
 
@@ -115,14 +106,14 @@ const SubServiceDetail = () => {
         <div className="subservice-section4-content">
           <div className="section4-chooseus-desktop">
             <div className="chooseus-desktop-head1">
-              <h1>why choose</h1>
+              <h1>why choose els legal</h1>
             </div>
-            <div className="chooseus-desktop-img">
+            {/* <div className="chooseus-desktop-img">
               <img src={assets.subService_3} />
-            </div>
-            <div className="chooseus-desktop-head1">
+            </div> */}
+            {/* <div className="chooseus-desktop-head1">
               <h1>els legal</h1>
-            </div>
+            </div> */}
           </div>
 
           <div className="section4-chooseus-mobile">
@@ -138,9 +129,9 @@ const SubServiceDetail = () => {
           {subService.whyChooseus.map((chooseus, index) => (
             <div key={index} className="subservice-sect4-list">
               <div className="sect4-list-header">
-                <div className="list-header-icon">
+                {/* <div className="list-header-icon">
                   <img src={assets.subService_icon2} />
-                </div>
+                </div> */}
                 <div className="list-header-head">
                   <h1>{chooseus.title}</h1>
                 </div>

@@ -80,7 +80,7 @@ const Home = () => {
       <div className="heroContainer">
 
         <h1 ref={textRef} className="heroTitle">
-          Legal Solutions For <br /> The Real World
+          Expert Legal Solutions
         </h1>
 
         <div className="heroBgContainer">

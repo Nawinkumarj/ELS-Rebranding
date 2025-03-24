@@ -69,7 +69,7 @@ const Navbar = () => {
         <div className="topBar flex-center">
           <button onClick={() => setshowEnquiryForm(true)}>Enquiry Now</button>
           <button>
-            <a href="tel:+44 (0) 203 149 8488">+44 (0) 203 149 8488</a>
+            <a href="tel:+44 (0) 203 149 8488">0203 149 8488</a>
           </button>
         </div>
 
@@ -197,7 +197,7 @@ const Navbar = () => {
             <button className="smCallBtn">Call Us</button>
           </div>
         </div>
-        <div className="NavbarSmBlack flex-center">
+        <div className={`NavbarSmBlack ${showNavbar ? "show" : "hide"} flex-center`}>
           <div onClick={() => navigate("/")} className="navLogoSmContainer">
             <img src={assets.logo} alt="" className="navLogoSm" />
           </div>

@@ -29,9 +29,10 @@ const Ourteam = () => {
 
     tlRef.current
       .to(pRef.current, { opacity: 0 })
-      .to(h1Ref.current, { x: "-42vw", y: "-35vh", scale: 0.8 }, "<")
+      .to(h1Ref.current, { x: "-42vw", y: "-25vh", scale: 0.8, }, "<")
       .to(h2Ref.current, { x: "42vw", y: "35vh", scale: 0.8 }, "<")
       .fromTo(boxRef.current, { scale: 0, opacity: 0 }, { scale: 1, opacity: 1, duration: 1 })
+      .to('.team-heading', {autoAlpha: 0})
       .to(containerRef.current, { backgroundColor: "#0000002c" })
       .to([h1Ref.current, h2Ref.current], { opacity: 0, duration: 0.5 }, "-=0.1");
 

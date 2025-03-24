@@ -15,6 +15,7 @@ import Ourteam from "./Pages/Ourteam";
 import Error404 from "./Pages/Error404";
 import ScrollToTop from "./Components/ScrollToTop";
 import ConstructionPage from "./Pages/ConstructionPage";
+import ServiceLandingPage from "./Pages/ServiceLandingPage";
 
 const isUnderConstruction = false;
 
@@ -28,20 +29,25 @@ const App = () => {
       <ScrollToTop />
       <Navbar />
       <Routes>
+        
         <Route path="/" element={<Home />} />
-        <Route path="/faqs" element={<Faq />} />
+        <Route path='/services' element={<ServiceLandingPage />} />
         <Route path="/services/:serviceUrl" element={<Service />} />
         <Route
           path="/services/:serviceUrl/:subServiceUrl"
           element={<SubServiceDetail />}
         />
         <Route path="/about-us" element={<About />} />
-        <Route path="/cookie-policy" element={<Cookies />} />
-        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/our-team" element={<Ourteam />} />
         <Route path="/contact-us" element={<Contact />} />
         <Route path="/careers" element={<Careers />} />
-        <Route path="/our-team" element={<Ourteam />} />
+        <Route path="/faqs" element={<Faq />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+        <Route path="/cookie-policy" element={<Cookies />} />
+
+
         <Route path="*" element={<Error404 />} />
+
       </Routes>
       <Footer />
     </div>

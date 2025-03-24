@@ -47,12 +47,13 @@ export const ServicesData = [
               "We assist with child contact arrangements and custody disputes",
           },
         ],
-        approch1:
+        approch:[
           "We take a compassionate and client-centric approach to contentious divorce.",
-        approch2:
+        
           "We work closely with you to understand your specific situation and provide tailored advice/representation to align with your needs. ",
-        approch3:
+     
           "Our team is committed to achieving fair and satisfactory outcomes for all parties involved. ",
+        ],
         whyChooseus: [
           {
             title: "Expertise",

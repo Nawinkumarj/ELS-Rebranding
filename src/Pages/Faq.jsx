@@ -98,9 +98,9 @@ const FAQ = () => {
     <div>
       <Banner bannerImg={assets.Bannerbg} />
       <div className="faq-container">
-        <div className="faq-bg-img">
+        {/* <div className="faq-bg-img">
           <img src={assets.FaqBg} alt="" />
-        </div>
+        </div> */}
         <div className="faq-inner">
           {faqs.map((faq, index) => (
             <div

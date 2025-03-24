@@ -27,12 +27,12 @@ const Footer = () => {
               </div>
             </div>
             <div className="footer-section1-email">
-              <a href="mailto:info@exchangelegalservices.com">
-                info@exchangelegalservices.com
+              <a href="mailto:nfo@els.legal">
+                info@els.legal
               </a>
             </div>
             <div className="footer-section1-phone">
-              <a href="tel:+44 (0) 203 149 8488">+44 (0) 203 149 8488</a>
+              <a href="tel:+44 (0) 203 149 8488">0203 149 8488</a>
             </div>
             <div className="footer-section1-icons">
               <div className="footer-icons">
@@ -85,8 +85,8 @@ const Footer = () => {
             <Link to="/services/family-law" className="footer-link">
               <div className="footer-section3-list">
                 <div className="list-name">
-                  <h1>legal service</h1>
-                  <h1>legal service</h1>
+                  <h1>Services</h1>
+                  <h1>Services</h1>
                 </div>
               </div>
             </Link>
