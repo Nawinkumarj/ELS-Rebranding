@@ -418,6 +418,22 @@
     justify-content: center;
     flex-direction: column;
   }
+  .team-member-card{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  /* Language spoken */
+  .langContainer{
+    height: 100%;
+    padding: 20px 0;
+  } 
+  .langInsideContainer{
+    height: 100%;
+    padding: 10px 5px;
+  }
 }
 /* Out Team ends */
 
@@ -600,7 +616,7 @@
 /* Responsive Design FAQ Page*/
 @media (max-width: 1024px) {
   .faq-inner {
-    max-width: 700px;
+    width: 80%;
     padding: 15px;
   }
 
@@ -615,7 +631,7 @@
 
 @media (max-width: 768px) {
   .faq-inner {
-    max-width: 600px;
+    width: 100%;
     padding: 15px;
   }
 
@@ -1019,9 +1035,12 @@
   .list-header-head h1 {
     font-size: 22px;
   }
-            .subservice-heading h1 {
-              font-size: 24px;
-            }
+  .subservice-heading h1 {
+    font-size: 24px;
+  }
+                        .chooseus-mobile-head1{
+                          width: 100%;
+                        }
 }
 
 /* subservice ends */
@@ -1398,6 +1417,8 @@
     grid-template-columns: 1fr;
     justify-items: center;
     row-gap: 1rem;
+    padding-top: 0rem;
+    position: relative;
   }
   .footer-bottom-section1 {
     order: 2;
@@ -1407,6 +1428,10 @@
   }
     .footer-section2-logo {
       width: 150px;
+    }
+    .footer-bottom-section3{
+      position: absolute;
+      top:-160px;
     }
 }
 

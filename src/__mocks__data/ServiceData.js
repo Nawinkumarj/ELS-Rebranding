@@ -1,6 +1,11 @@
+import { assets } from "../assets/assets";
+
 export const ServicesData = [
   {
     id: 1,
+    serviceBg: assets.familylaw,
+    bannerImg: assets.familylawbg,
+    subserviceBg: assets.familylawchildbg,
     url: "family-law",
     name: "Family Law",
     description:
@@ -47,11 +52,11 @@ export const ServicesData = [
               "We assist with child contact arrangements and custody disputes",
           },
         ],
-        approch:[
+        approch: [
           "We take a compassionate and client-centric approach to contentious divorce.",
-        
+
           "We work closely with you to understand your specific situation and provide tailored advice/representation to align with your needs. ",
-     
+
           "Our team is committed to achieving fair and satisfactory outcomes for all parties involved. ",
         ],
         whyChooseus: [
@@ -119,12 +124,13 @@ export const ServicesData = [
               "We assist with child contact arrangements and custody agreements",
           },
         ],
-        approch1:
+        approch: [
           "We take a collaborative and client-focused approach to non-contentious divorce. ",
-        approch2:
+
           "We work closely with you to understand your specific situation and provide tailored advice with solutions that align with your goals.",
-        approch3:
+
           "Our team is committed to achieving amicable and adequate outcomes for all parties involved.",
+        ],
         whyChooseus: [
           {
             title: "Expertise",
@@ -190,11 +196,13 @@ export const ServicesData = [
               "We advise on the enforcement of child contact orders if one party fails to comply",
           },
         ],
-        approch1: "We take a child-centred approach to contact arrangements.",
-        approch2:
+        approch: [
+          "We take a child-centred approach to contact arrangements.",
+
           "We work closely with you to understand your specific situation and provide tailored advice with solutions prioritising the wellbeing of your children.",
-        approch3:
+
           "Our team is devoted to achieving fair and satisfactory outcomes for all parties involved. ",
+        ],
         whyChooseus: [
           {
             title: "Expertise",
@@ -260,12 +268,13 @@ export const ServicesData = [
               "We assist with financial settlements and support arrangements",
           },
         ],
-        approch1:
+        approch: [
           "We take a compassionate and client-focused approach to cohabitation disputes. ",
-        approch2:
+
           "We work directly with you to understand your circumstances to provide tailored advice with representation that aligns with your needs and goals.",
-        approch3:
+
           "Our team is committed to achieving fair and satisfactory outcomes for all parties involved.",
+        ],
         whyChooseus: [
           {
             title: "Expertise",
@@ -331,12 +340,13 @@ export const ServicesData = [
               "We advise on the enforcement of financial orders if one party fails to comply",
           },
         ],
-        approch1:
+        approch: [
           "We take a meticulous and client-focused approach to financial proceedings.",
-        approch2:
+
           "We work closely with you to understand your specific situation and provide tailored advice with representation that aligns with your needs and goals.",
-        approch3:
+
           "Our team is committed to achieving fair and satisfactory outcomes for all parties involved.",
+        ],
         whyChooseus: [
           {
             title: "Expertise",
@@ -401,12 +411,13 @@ export const ServicesData = [
               "We provide urgent legal support for emergency injunctions to ensure immediate protection",
           },
         ],
-        approch1:
+        approch: [
           "We take a compassionate and client-focused approach to injunctions.",
-        approch2:
+
           "We work closely with you to understand your specific situation and provide tailored advice aligning with your requirements.",
-        approch3:
+
           "Our team is committed to ensuring your safety and protecting your rights.",
+        ],
         whyChooseus: [
           {
             title: "Expertise",
@@ -472,12 +483,13 @@ export const ServicesData = [
               "We advise on the enforcement of prenuptial agreements if disputes arise",
           },
         ],
-        approch1:
+        approch: [
           "At ELS, we take a meticulous approach to drafting and reviewing prenuptial agreements.",
-        approch2:
+
           "We ensure that every agreement is clear, fair and legally enforceable, minimising the risk of future disputes. ",
-        approch3:
+
           "Our team stays up to date with the latest legal developments to provide you with the most accurate and relevant advice.",
+        ],
         whyChooseus: [
           {
             title: "Expertise",
@@ -510,6 +522,9 @@ export const ServicesData = [
 
   {
     id: 2,
+    serviceBg: assets.wills,
+    bannerImg: assets.willsbg,
+    subserviceBg: assets.willschildbg,
     url: "wills-probate-and-wealth-management",
     name: "Wills & Probate and Private Client - Wealth Management",
     description:
@@ -547,10 +562,10 @@ export const ServicesData = [
             description: "We advise on contested Wills and probate litigation",
           },
         ],
-        approch1:
+        approch: [
           "We take a personalised approach, working closely with you to understand your family and financial circumstances.",
-        approch2: "We ensure your Will reflects your precise intentions.",
-        approch3: "Content will be updated soon",
+          "We ensure your Will reflects your precise intentions.",
+        ],
         whyChooseus: [
           {
             title: "Expert Knowledge",
@@ -606,10 +621,9 @@ export const ServicesData = [
               "We handle and resolve any issues related to the misuse of this power ",
           },
         ],
-        approch1:
+        approch: [
           "We work directly with you to guide you through the LPA process with clear legal advice and support. ",
-        approch2: "Content will be updated soon",
-        approch3: "Content will be updated soon",
+        ],
         whyChooseus: [
           {
             title: "Specialist LPA Solicitors",
@@ -659,10 +673,9 @@ export const ServicesData = [
               "We resolve beneficiary disputes to negotiate fair outcomes for all parties",
           },
         ],
-        approch1:
+        approch: [
           "We work to maximise tax efficiency while ensuring fairness among beneficiaries.",
-        approch2: "Content will be updated soon",
-        approch3: "Content will be updated soon",
+        ],
         whyChooseus: [
           {
             title: "Inheritance Tax Expertise",
@@ -714,10 +727,9 @@ export const ServicesData = [
               "We settle conflicts with Executors over the estate management ",
           },
         ],
-        approch1:
+        approch: [
           "We manage the probate process efficiently and with sensitivity, ensuring compliance with all legal obligations.",
-        approch2: "Content will be updated soon",
-        approch3: "Content will be updated soon",
+        ],
         whyChooseus: [
           {
             title: "Experienced Team",
@@ -767,10 +779,9 @@ export const ServicesData = [
             description: "We resolve any legal conflicts relating to Trusts",
           },
         ],
-        approch1:
+        approch: [
           "We ensure your assets are structured correctly to maximise benefits and avoid unnecessary tax burdens. ",
-        approch2: "Content will be updated soon",
-        approch3: "Content will be updated soon",
+        ],
         whyChooseus: [
           {
             title: "Expertise",
@@ -822,10 +833,9 @@ export const ServicesData = [
               "We resolve any conflicts that may arise in relation to deputyship applications or processes",
           },
         ],
-        approch1:
+        approch: [
           "We simplify the deputyship process, ensuring smooth court approval and compliance with all regulations. rdens. ",
-        approch2: "Content will be updated soon",
-        approch3: "Content will be updated soon",
+        ],
         whyChooseus: [
           {
             title: "Expertise",
@@ -876,10 +886,9 @@ export const ServicesData = [
             description: "We assist dependents with financial claims",
           },
         ],
-        approch1:
+        approch: [
           "We work towards amicable solutions but are prepared to proceed to litigation should this prove necessary. ",
-        approch2: "Content will be updated soon",
-        approch3: "Content will be updated soon",
+        ],
         whyChooseus: [
           {
             title: "Expertise",
@@ -932,10 +941,9 @@ export const ServicesData = [
               "Should there be any issues or disputes with HMRC, we will resolve them with no fuss",
           },
         ],
-        approch1:
+        approch: [
           "We ensure compliance with tax regulations whilst still optimising for tax efficiency. ",
-        approch2: "Content will be updated soon",
-        approch3: "Content will be updated soon",
+        ],
         whyChooseus: [
           {
             title: "Expertise",
@@ -987,10 +995,9 @@ export const ServicesData = [
               "We set up and manage trusts with the sole purpose of protecting your assets and investments",
           },
         ],
-        approch1:
+        approch: [
           "We tailor estate plans to fit your family’s long-term financial goals and preserving your generational wealth.",
-        approch2: "Content will be updated soon",
-        approch3: "Content will be updated soon",
+        ],
         whyChooseus: [
           {
             title: "Expertise",
@@ -1020,6 +1027,9 @@ export const ServicesData = [
 
   {
     id: 3,
+    serviceBg: assets.litigation,
+    bannerImg: assets.litigationbg,
+    subserviceBg: assets.litigationchildbg,
     url: "litigation-and-dispute-resolution",
     name: "Litigation",
     description:
@@ -1060,11 +1070,11 @@ export const ServicesData = [
               "We handle conflicts over issues such as non-compete clauses or wrongful termination",
           },
         ],
-        approch1:
+        approch: [
           "We focus on early dispute resolution through negotiation and mediation. ",
-        approch2:
+
           "If litigation is then required, we provide comprehensive representation to protect your interests.",
-        approch3: "Content will be updated soon",
+        ],
         whyChooseus: [
           {
             title: "Expertise",
@@ -1122,12 +1132,10 @@ export const ServicesData = [
             description:
               "We assist businesses and individuals in securing unpaid invoices and debts",
           },
-          ,
         ],
-        approch1:
+        approch: [
           "We utilise a practical and cost-efficient strategy, applying legal pressure on debtors while exploring settlement options. ",
-        approch2: "Content will be updated soon..",
-        approch3: "Content will be updated soon",
+        ],
         whyChooseus: [
           {
             title: "Fast-Track Recovery",
@@ -1178,12 +1186,10 @@ export const ServicesData = [
             description:
               "We resolve disputes over incorrect property valuations",
           },
-          ,
         ],
-        approch1:
+        approch: [
           "We assess your matter thoroughly and pursue negotiation or litigation to obtain fair compensation.",
-        approch2: "Content will be updated soon..",
-        approch3: "Content will be updated soon",
+        ],
         whyChooseus: [
           {
             title: "Expertise",
@@ -1235,12 +1241,10 @@ export const ServicesData = [
             description:
               "We pursue claims for the protection of mothers and newborns",
           },
-          ,
         ],
-        approch1:
+        approch: [
           "We take a compassionate yet firm approach, ensuring our clients receive the compensation they deserve. ",
-        approch2: "Content will be updated soon..",
-        approch3: "Content will be updated soon",
+        ],
         whyChooseus: [
           {
             title: "Expertise",
@@ -1291,12 +1295,10 @@ export const ServicesData = [
             title: "Pre-Publication Review",
             description: "We resolve and prevent defamation before it happens",
           },
-          ,
         ],
-        approch1:
+        approch: [
           "We act quickly and decisively, using legal tools to remove harmful content, secure public corrections, and claim compensation. ",
-        approch2: "Content will be updated soon..",
-        approch3: "Content will be updated soon",
+        ],
         whyChooseus: [
           {
             title: "Expertise",
@@ -1345,12 +1347,10 @@ export const ServicesData = [
             title: "Property & Family Dispute Resolution ",
             description: "Content will be updated soon",
           },
-          ,
         ],
-        approch1:
+        approch: [
           "We promote amicable settlements, saving our clients time, stress and legal costs. ",
-        approch2: "Content will be updated soon..",
-        approch3: "Content will be updated soon",
+        ],
         whyChooseus: [
           {
             title: "Expertise",
@@ -1380,6 +1380,9 @@ export const ServicesData = [
 
   {
     id: 4,
+    serviceBg: assets.property,
+    bannerImg: assets.propertybg,
+    subserviceBg: assets.familylaw,
     url: "property-and-land",
     name: "Property and Land",
     description:
@@ -1427,12 +1430,13 @@ export const ServicesData = [
               "We aid in resolving disagreements over the return of security deposits at the end of a tenancy.",
           },
         ],
-        approch1:
+        approch: [
           "ELS prioritises a resolution-focused approach, aiming to settle disputes amicably wherever possible. ",
-        approch2:
+
           "Our team is skilled in mediation and ADR (Alternative Dispute Resolution), helping both parties reach a fair and satisfactory agreement without the need for lengthy court proceedings. ",
-        approch3:
+
           "However, if litigation becomes necessary, we are prepared to represent your interests vigorously in court. ",
+        ],
         whyChooseus: [
           {
             title: "Expertise",
@@ -1494,11 +1498,11 @@ export const ServicesData = [
               "When the landlord wishes to repossess the property, we assist in the enforcement.",
           },
         ],
-        approch1:
+        approch: [
           "ELS Legal prioritises resolving issues amicably where possible.",
-        approch2:
+
           "Our team excels in negotiation and mediation, helping both parties reach a fair and satisfactory resolution, without the need for lengthy and expensive court proceedings. ",
-        approch3: "Content need to be updated",
+        ],
         whyChooseus: [
           {
             title: "Specialised Knowledge",
@@ -1569,12 +1573,13 @@ export const ServicesData = [
               "We assist with claims for adverse possession and any defence required.",
           },
         ],
-        approch1:
+        approch: [
           "Our focus is a resolution-based approach, where we always try to settle disputes fairly. ",
-        approch2:
+
           "Our skilled team are well versed in negotiation and mediation, enabling both sides to reach a fair agreement.",
-        approch3:
+
           "But fret not, if litigation becomes necessary, we are well-equipped to represent your interests in court.",
+        ],
         whyChooseus: [
           {
             title: "Expertise",
@@ -1644,11 +1649,11 @@ export const ServicesData = [
               "We provide guidance on compliance with all relevant laws and regulations, such as planning permissions and zoning laws .",
           },
         ],
-        approch1:
+        approch: [
           "To make property transfers and restrictions as stress-free as possible, ELS operates on a client-focused approach.",
-        approch2:
+
           "Our team are experts in negotiation and mediation, ready to resolve any issues that arise during the process.",
-        approch3: "Content will be updated soon",
+        ],
         whyChooseus: [
           {
             title: "Expertise",
@@ -1719,12 +1724,13 @@ export const ServicesData = [
               "We advise on issues related to liability and indemnity.",
           },
         ],
-        approch1:
+        approch: [
           "Our focus is a resolution-based approach, where we always try to settle disputes fairly.",
-        approch2:
+
           "Our skilled team are well versed in negotiation and mediation, enabling both sides to reach a fair agreement.",
-        approch3:
+
           "But fret not, if litigation becomes necessary, we are well-equipped to represent your interests in court.",
+        ],
         whyChooseus: [
           {
             title: "Expertise",
@@ -1786,12 +1792,13 @@ export const ServicesData = [
               "We ensure that new agreements comply with existing restrictive covenants.",
           },
         ],
-        approch1:
+        approch: [
           "At ELS Legal, we take a proactive approach to managing restrictive covenants.",
-        approch2:
+
           "Our team conducts thorough reviews of property deeds and contracts to identify any restrictive covenants that may affect your property.",
-        approch3:
+
           "We provide clear, actionable advice on how to address these covenants, whether through enforcement, modification or removal.",
+        ],
         whyChooseus: [
           {
             title: "In-Depth Knowledge",
@@ -1863,12 +1870,13 @@ export const ServicesData = [
               "We assist in resolving disputes arising from tenancy agreements, including issues related to breaches of terms.",
           },
         ],
-        approch1:
+        approch: [
           "At ELS, we take a meticulous approach to drafting and reviewing tenancy agreements.",
-        approch2:
+
           "We ensure that every agreement is clear, fair, and legally enforceable, minimising the risk of future disputes. ",
-        approch3:
+
           "Our team stays up to date with the latest legal developments to provide you with the most accurate and relevant advice. ",
+        ],
         whyChooseus: [
           {
             title: "Expertise",
@@ -1944,12 +1952,13 @@ export const ServicesData = [
               "We provide expert representation at tribunal hearings to ensure your case is presented effectively.",
           },
         ],
-        approch1:
+        approch: [
           "At ELS Legal, we take a client-centred approach to handling RROs.",
-        approch2:
+
           "We understand the importance of these orders for both tenants and landlords and strive to achieve fair and just outcomes. ",
-        approch3:
+
           "Our team is skilled in negotiation, mediation and litigation, ensuring we can support you through every stage of the process.",
+        ],
         whyChooseus: [
           {
             title: "Specialised Knowledge",
@@ -1982,6 +1991,9 @@ export const ServicesData = [
 
   {
     id: 5,
+    serviceBg: assets.employment,
+    bannerImg: assets.employmentbg,
+    subserviceBg: assets.familylaw,
     url: "employment-law",
     name: "Employment Law",
     description:
@@ -2034,11 +2046,13 @@ export const ServicesData = [
               "We offer advice on effective onboarding procedures to integrate new employees smoothly into your organisation.",
           },
         ],
-        approch1: "At ELS, we take a proactive approach to recruitment. ",
-        approch2:
+        approch: [
+          "At ELS, we take a proactive approach to recruitment. ",
+
           "We work closely with you to understand your specific needs and objectives, providing tailored advice and solutions that align with your business goals.",
-        approch3:
+
           "Our team stays up to date with the latest legal developments to ensure that your recruitment practices are compliant and effective.",
+        ],
         whyChooseus: [
           {
             title: "Expertise",
@@ -2110,12 +2124,13 @@ export const ServicesData = [
               "We offer support and advice to employees facing redundancy, including guidance on their rights and options",
           },
         ],
-        approch1:
+        approch: [
           "At ELS, we take a sensitive and thorough approach to redundancy.",
-        approch2:
+
           "We work closely with you to understand your specific situation and provide tailored advice that aligns with your business needs and legal obligations. ",
-        approch3:
+
           "Our team is committed to ensuring that redundancy procedures are conducted fairly and transparently, minimising the risk of disputes and claims.",
+        ],
         whyChooseus: [
           {
             title: "Expertise",
@@ -2177,12 +2192,13 @@ export const ServicesData = [
               "We advise whistleblowers on their rights to protection from retaliation and represent them in cases where they face unfair treatment because of their disclosures.",
           },
         ],
-        approch1:
+        approch: [
           "We take a principled and supportive approach to whistleblowing.",
-        approch2:
+
           "We work closely with whistleblowers to ensure they feel safe and supported throughout the process. ",
-        approch3:
+
           "We assist employers in handling whistleblowing claims with integrity and fairness. ",
+        ],
         whyChooseus: [
           {
             title: "Expertise",
@@ -2249,12 +2265,13 @@ export const ServicesData = [
               "We assist in the integration of transferred employees into the new organisation, including harmonising terms and conditions.",
           },
         ],
-        approch1:
+        approch: [
           "ELS Legal always takes a meticulous and client-focused approach to TUPE transfers and restructures.",
-        approch2:
+
           "We work closely with you to understand your specific needs and objectives, providing tailored advice and solutions.",
-        approch3:
+
           "Our team stays up to date with the latest legal developments to ensure that your processed are compliant and effective.",
+        ],
         whyChooseus: [
           {
             title: "Expertise",
@@ -2321,12 +2338,13 @@ export const ServicesData = [
               "We assist with appeals against tribunal decisions, ensuring that your case is thoroughly reviewed and presented.",
           },
         ],
-        approch1:
+        approch: [
           "At ELS, we take a compassionate and client-centred approach to wrongful and unfair dismissal cases. ",
-        approch2:
+
           "We work directly with you to understand your specific situation and provide tailored advice and representation that aligns with your needs and goals. ",
-        approch3:
+
           "Our team is dedicated to achieving the best possible outcome for you. ",
+        ],
         whyChooseus: [
           {
             title: "Expertise",
@@ -2393,11 +2411,11 @@ export const ServicesData = [
               "We advise employers on the development and implementation of anti-discrimination policies and training programs.",
           },
         ],
-        approch1:
+        approch: [
           "At ELS Legal, we work hand in hand with you to understand your specific situation and provide tailored advice and representation that aligns with your needs and goals.",
-        approch2:
+
           "Our team is committed to promoting fairness and equality within the workplace.",
-        approch3: "Content will be updated soon",
+        ],
         whyChooseus: [
           {
             title: "Expertise",
@@ -2484,12 +2502,13 @@ export const ServicesData = [
               "We assist in resolving disputes that may arise during the negotiation of the settlement agreement",
           },
         ],
-        approch1:
+        approch: [
           "At ELS, we take a meticulous and client-focused approach to settlement agreements.",
-        approch2:
+
           "We work closely with you to understand your specific situation and provide tailored advice and representation that aligns with your needs and goals. ",
-        approch3:
+
           "Our team is committed to achieving fair and satisfactory outcomes for all parties involved. ",
+        ],
         whyChooseus: [
           {
             title: "Expertise",
@@ -2522,6 +2541,9 @@ export const ServicesData = [
 
   {
     id: 6,
+    serviceBg: assets.corporate,
+    bannerImg: assets.corporatebg,
+    subserviceBg: assets.familylaw,
     url: "business-commercial-and-corporate",
     name: "Corporate Law",
     description:
@@ -2579,11 +2601,13 @@ export const ServicesData = [
               "We provide continual legal support to help you navigate any challenges that arise as your business grows",
           },
         ],
-        approch1: "We take a client-focused approach to company incorporation.",
-        approch2:
+        approch: [
+          "We take a client-focused approach to company incorporation.",
+
           "We work closely with you to understand your business goals and provide tailored advice and solutions that align with your vision. ",
-        approch3:
+
           "Our team stays up to date with the latest legal developments to ensure your company is set up for success from the start. ",
+        ],
         whyChooseus: [
           {
             title: "Expertise",
@@ -2650,12 +2674,13 @@ export const ServicesData = [
               "We provide guidance on securing funding and investment for your startup",
           },
         ],
-        approch1:
+        approch: [
           "Our focus is always on our clients for business startup guidance.",
-        approch2:
+
           "We work directly with the founders to understand your vision and provide tailored advice and solutions that align with your goals.",
-        approch3:
+
           "Our team is committed to helping you navigate the complexities of starting a new business with confidence.",
+        ],
         whyChooseus: [
           {
             title: "Expertise",
@@ -2722,12 +2747,13 @@ export const ServicesData = [
               "We draft and review shareholder agreements to define the rights and obligations of shareholders and prevent conflicts",
           },
         ],
-        approch1:
+        approch: [
           "We always tackle director-shareholder disputes with a client-focused approach.",
-        approch2:
+
           "We work hand in hand with you to understand your specific situation and provide tailored advice and representation that aligns with your needs and goals.",
-        approch3:
+
           "Our team is committed to achieving fair and satisfactory outcomes for all parties involved.",
+        ],
         whyChooseus: [
           {
             title: "Expertise",
@@ -2789,12 +2815,13 @@ export const ServicesData = [
               "We assist in resolving disputes arising from shareholder agreements, including issues related to breach of terms",
           },
         ],
-        approch1:
+        approch: [
           "We take a meticulous approach to drafting and reviewing shareholder agreements.",
-        approch2:
+
           "We ensure that every agreement is clear, fair and legally enforceable, minimising the risk of future disputes.",
-        approch3:
+
           "Our team stays up to date with the latest legal developments to provide you with the most accurate and relevant advice.",
+        ],
         whyChooseus: [
           {
             title: "Expertise",
@@ -2856,12 +2883,13 @@ export const ServicesData = [
               "We assist in resolving disputes related to asset ownership, use and management",
           },
         ],
-        approch1:
+        approch: [
           "Our approach is very strategic when it comes to asset management. ",
-        approch2:
+
           "We work directly with you to understand your business goals, providing tailored advice and solutions that align with your vision. ",
-        approch3:
+
           "Our team is committed to helping you maximise the value of your business assets.",
+        ],
         whyChooseus: [
           {
             title: "Expertise",
@@ -2928,12 +2956,13 @@ export const ServicesData = [
               "We assist in resolving disputes arising from international transactions, including arbitration and litigation",
           },
         ],
-        approch1:
+        approch: [
           "We take a meticulous and client-centred approach to international finance.",
-        approch2:
+
           "We work directly with you to understand your specific needs and objectives, providing tailored advice and solutions that align with your business goals.",
-        approch3:
+
           "Our team stays regularly up to date with the latest legal developments to ensure your international dealings are compliant and effective.",
+        ],
         whyChooseus: [
           {
             title: "Expertise",
@@ -3000,12 +3029,13 @@ export const ServicesData = [
               "We offer guidance on restructuring options to help businesses avoid insolvency and improve financial stability",
           },
         ],
-        approch1:
+        approch: [
           "ELS always takes a compassionate and client-focused approach to insolvency and liquidation.",
-        approch2:
+
           "We work with you and your team to understand your specific situation, then provide tailored advice and solutions aligning with your needs.",
-        approch3:
+
           "Our team is committed to helping you navigate these difficult processes with ease.",
+        ],
         whyChooseus: [
           {
             title: "Expertise",
@@ -3072,12 +3102,13 @@ export const ServicesData = [
               "We provide ongoing support for the management and enforcement of commercial contracts",
           },
         ],
-        approch1:
+        approch: [
           "At ELS, we take a meticulous approach to drafting and reviewing commercial contracts.",
-        approch2:
+
           "We ensure that every contract is fair, clear and legally enforceable, minimising the risk of future disputes.",
-        approch3:
+
           "Our team stays up to date with the latest legal developments to provide you with the most accurate and relevant legal advice.",
+        ],
         whyChooseus: [
           {
             title: "Expertise",
@@ -3144,12 +3175,13 @@ export const ServicesData = [
               "We assist with the integration of the acquired business into your existing operations, including harmonising terms and conditions where appropriate",
           },
         ],
-        approch1:
+        approch: [
           "At ELS Legal, our approach is client-focused, and detail oriented for business sales and purchases.",
-        approch2:
+
           "Our solutions are only given after working directly working with you and your business, which we then tailor and craft our solutions for. ",
-        approch3:
+
           "Our team stays up to date with the latest legal developments to provide you with the most accurate and relevant legal advice.",
+        ],
         whyChooseus: [
           {
             title: "Expertise",

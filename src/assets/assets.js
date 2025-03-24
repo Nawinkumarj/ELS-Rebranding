@@ -1,9 +1,8 @@
 // Images
 import logo from './logo.svg';
 import Bannerbg from "./Bannerbg.svg";
-import HeroBG from "./HeroBG.svg";
+import HeroBG from "./Main_banner.jpeg";
 import ServiceMain from "./ServiceMain.svg";
-import FaqBg from "./faq.svg";
 import Auction from "./auction.svg";
 import ServiceCard_Img from "./ServiceCard_Img.svg";
 import journey from "./TIMELINE.svg";
@@ -17,7 +16,10 @@ import dropdownBG from "./dropdownBG.svg";
 import subService_bg1 from "./subservice-bg1.svg"
 import journeyPathSm from "./journeyPathSmall.svg"
 // import navListBG from "./navListBG.svg";
-
+// Breeadcrumbs
+import careerbg from './career.jpeg'
+import faqbg from './faqbg.jpeg'
+import aboutbg from './aboutbg.jpeg'
 
 // Video
 import Hero_Video from "./mainvideo.mp4"
@@ -33,6 +35,28 @@ import Team6 from "./t-6.jpg";
 import Team7 from "./t-7.jpg";
 import Team8 from "./t-8.jpg";
 
+
+// Service
+import familylaw from './familylaw.jpeg'
+import familylawbg from './familylawbg.jpeg'
+import familylawchildbg from './familyawchildbg.jpeg'
+import wills from './wills.jpeg'
+import willsbg from './willsbg.jpeg'
+import willschildbg from './willschildbg.jpeg'
+import litigation from './litigation.jpeg'
+import litigationbg from './litigationbg.jpeg'
+import litigationchildbg from './litigationchildbg.jpeg'
+import property from './property.jpeg'
+import propertybg from './propertybg.jpeg'
+import propertychildbg from './propertychildbg.jpeg'
+import employment from './employment.jpeg'
+import employmentbg from './employmentbg.jpeg'
+import employmentchildbg from './employmentchildbg.jpeg'
+import corporate from './corporate.jpeg'
+import corporatebg from './corporatebg.jpeg'
+import corporatechildbg from './corporatechildbg.jpeg'
+
+
 //Contact icon & Img
 import FaceBook from "./facebook.svg";
 import CallIcon from "./call.svg";
@@ -45,6 +69,7 @@ import HammerImg from "./hammer.svg";
 import ImgPaper from "./Imgpaper.svg";
 import EmailArrow from "./Emailarrow.svg";
 import GoastImg from "./GoastImg.svg";
+import downarrow from './downarrow.svg'
 
 // Icon
 import chooseUs_Icon1 from './chooseUs_Icon1.svg'
@@ -75,7 +100,6 @@ export const assets = {
   Hero_Video,
   HeroBG,
   ServiceMain,
-  FaqBg,
   Auction,
   ServiceCard_Img,
   chooseUs_Icon1,
@@ -125,4 +149,26 @@ export const assets = {
   subService_icon2,
   journeyPathSm,
   close,
+  careerbg,
+  familylaw,
+  wills,
+  litigation,
+  property,
+  employment,
+  corporate,
+  familylawbg,
+  willsbg,
+  litigationbg,
+  propertybg,
+  employmentbg,
+  corporatebg,
+  familylawchildbg,
+  willschildbg,
+  litigationchildbg,
+  propertychildbg,
+  employmentchildbg,
+  corporatechildbg,
+  downarrow,
+  faqbg,
+  aboutbg,
 };

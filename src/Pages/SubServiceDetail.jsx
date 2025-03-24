@@ -19,14 +19,15 @@ const SubServiceDetail = () => {
     (sub) => sub.url === decodeURIComponent(subServiceUrl) // FIX: Use `subServiceUrl`
   );
 
+ 
   if (!service || !subService) {
-    return <h2>Sub-service not found</h2>;
+    return <h2>Content will be updated soon</h2>;
   }
 
   return (
     <div className="subservice-container">
       <Banner
-        bannerImg={assets.Bannerbg}
+        bannerImg={service.subserviceBg}
         heading={subService.name}
         content={subService.description}
       />
@@ -122,9 +123,9 @@ const SubServiceDetail = () => {
                 why choose <br /> els legal
               </h1>
             </div>
-            <div className="chooseus-mobile-img">
+            {/* <div className="chooseus-mobile-img">
               <img src={assets.subService_3} />
-            </div>
+            </div> */}
           </div>
           {subService.whyChooseus.map((chooseus, index) => (
             <div key={index} className="subservice-sect4-list">

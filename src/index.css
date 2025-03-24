@@ -155,6 +155,10 @@ a {
   transform: translateY(0);
 }
 
+.NavListSm.hide {
+  top: 39% !important;
+}
+
 
 .navbarContainer .navbarSection .logoContainer .navLogo {
   width: 150px;
@@ -190,6 +194,10 @@ a {
   border-radius: 10px;
   overflow: hidden;
   /* border: 1px solid black; */
+}
+
+.serviceDropDownContainer.hide {
+  top: 200%;
 }
 
 .navbarSection .serviceDropDownContainer .dropdownBG {
@@ -320,8 +328,11 @@ a {
 .NavbarSm {
   display: none;
   width: 100%;
-  background-color: white;
-  position: relative;
+  /* background-color: white; */
+  height: fit-content;
+  position: sticky;
+  top: 0;
+  z-index: 99;
 }
 
 .topBarSm {
@@ -336,21 +347,22 @@ a {
   border-radius: 10px;
   height: 100%;
   padding: 5px;
-  background-color: var(--primary-color);
   justify-content: space-between;
   gap: 10px;
 }
 
-.topBarSm .topBarSmContent button {
+.topBarSm .topBarSmContent a {
   width: 100%;
   height: 100%;
   border: none;
   border-radius: 10px;
   background-color: transparent;
   font-size: 18px;
+  background-color: var(--primary-color);
   font-family: var(--content);
   font-weight: 700;
   color: white;
+  cursor: pointer;
 }
 
 /* .topBarSm .topBarSmContent .smCallBtn {
@@ -361,10 +373,10 @@ a {
 .NavbarSm .NavbarSmBlack {
   width: 100%;
   height: 100%;
-  background-color: white;
   justify-content: space-between;
   padding-right: 20px;
   transition: .5s all;
+  background-color: white;
 }
 
 .NavbarSm .NavbarSmBlack .navLogoSm {
@@ -427,11 +439,10 @@ a {
 
 .NavbarSm .NavListSm {
   position: absolute;
-  width: 70%;
+  width: 50%;
   top: 100%;
   right: 0;
-  padding: 25px;
-  padding-top: 50px;
+  padding: 20px 25px 25px 40px;
   z-index: 99;
   background: rgb(0, 0, 0);
   background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(102, 102, 102, 1) 100%);
@@ -448,6 +459,10 @@ a {
 
 .NavbarSm .NavListSm .NavListSmNormal a {
   color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
 }
 
 .NavbarSm .NavListSm .NavListSmNormal a p {
@@ -697,7 +712,7 @@ a {
 /* SERVICE CARD STRAT */
 
 .serviceCardContainer {
-  height: 350px;
+  height: 300px;
   border-radius: 20px;
   position: relative;
   overflow: hidden;
@@ -718,7 +733,7 @@ a {
   padding: 20px;
   backdrop-filter: blur(5px) saturate(200%);
   -webkit-backdrop-filter: blur(5px) saturate(200%);
-  background-color: rgba(255, 255, 255, 0.18);
+  background-color: rgba(12, 1, 1, 0.18);
   bottom: 0;
 }
 
@@ -1455,7 +1470,7 @@ a {
 
 .langContainer .langInsideContainer {
   /* width: 85%; */
-  height: 500px;
+  height: 50%;
   background-color: #3d0211;
   border-radius: 30px;
   transition: transform 0.3s;
@@ -1596,10 +1611,9 @@ a {
 
 .faq-container {
   position: relative;
-  height: 220vh;
   width: 100%;
   overflow: hidden;
-  margin-top: 20px;
+  margin-top: 50px;
 }
 
 .faq-container .faq-bg-img {
@@ -1617,18 +1631,13 @@ a {
 
 /* Centering the FAQ Section */
 .faq-inner {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   gap: 20px;
-  width: 100%;
-  max-width: 900px;
-  /* Limits max width */
+  width: 60%;
+  margin: auto;
   padding: 20px;
 }
 
@@ -1669,11 +1678,10 @@ a {
   color: var(--primary-color);
   transform: rotate(100deg);
 }
-
-.rotate {
-  transform: rotate(-100deg);
+.downarrow{
+  width: 10px !important;
+  transform: rotate(-10deg);
 }
-
 /* FAQ Answer */
 .faq-answer {
   max-height: 0;
@@ -2089,7 +2097,7 @@ a {
 .banner-main {
   position: relative;
   width: 100%;
-  height: 70vh;
+  height: 50vh;
 }
 
 .banner-bg {
@@ -2102,6 +2110,7 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center;
 }
 
 .banner-section {
@@ -2114,7 +2123,7 @@ a {
   background: rgba(255, 255, 255, 0.09);
   padding: 1rem 2rem;
   border-radius: 15px;
-  backdrop-filter: blur(24px);
+  backdrop-filter: blur(15px);
 }
 
 .banner-logo {

@@ -18,6 +18,7 @@ const ServiceLandingPage = () => {
         {ServicesData.map((service) => (
           <ServiceCard
             key={service.id}
+            servicebg={service.serviceBg}
             serviceName={service.name}
             serviceUrl={service.url}
           />

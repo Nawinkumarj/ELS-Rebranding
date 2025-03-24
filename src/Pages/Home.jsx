@@ -94,9 +94,9 @@ const Home = () => {
 
       <div className="homeServiceCard">
         {ServicesData.map((service) => (
-          <ServiceCard key={service.id} serviceName={service.name} serviceUrl={service.url} />
+          <ServiceCard key={service.id} serviceName={service.name} servicebg={service.serviceBg} serviceUrl={service.url} />
         ))}
-      </div>
+      </div>x
 
       <ChooseUs />
 

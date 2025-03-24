@@ -23,7 +23,7 @@ const Cookies = () => {
   return (
     <>
       <Banner
-        bannerImg={assets.Bannerbg}
+        bannerImg={assets.aboutbg}
         heading="Cookies Policy"
         content="lorem "
       />

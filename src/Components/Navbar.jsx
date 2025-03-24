@@ -15,6 +15,8 @@ const Navbar = () => {
 
   const [showSmServiceNav, setshowSmServiceNav] = useState(false);
 
+  const [selectedService, setSelectedService] = useState(null);
+
   const [activeService, setActiveService] = useState(null);
 
   const [showNavbar, setShowNavbar] = useState(true);
@@ -80,8 +82,8 @@ const Navbar = () => {
             </Link>
           </div>
           <div className="navLinkContainer flex-center">
-            <NavLink>
-              <p onClick={toggleDropdown}>Services</p>
+            <NavLink to="/services">
+              <p onMouseOver={toggleDropdown}>Services</p>
             </NavLink>
             <NavLink to="/about-us">
               <p>About Us</p>
@@ -96,12 +98,12 @@ const Navbar = () => {
           <AnimatePresence>
             {isOpen && (
               <motion.div
-                initial={{ opacity: 0, y: -40, x: "5%" }}
+                initial={{ opacity: 0, y: 40, x: "5%" }}
                 animate={{ opacity: 1, y: 0, x: "5%" }}
-                exit={{ opacity: 0, y: -10 }}
+                exit={{ opacity: 0, y: 10 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
-                className="serviceDropDownContainer flex-center"
-              >
+                className={`serviceDropDownContainer flex-center ${showNavbar ? 'show' : 'hide'}`} >
+
                 {/* <div className="dropdownBG">
                 <img src={assets.dropdownBG} alt="" />
               </div> */}
@@ -171,7 +173,7 @@ const Navbar = () => {
                                   to={`services/${selectedService.url}/${sub.url}`}
                                   onClick={toggleDropdown}
                                 >
-                                  <span>&#10140;</span>
+                                  {/* <span>&#10140;</span> */}
                                   <p>{sub.name}</p>
                                 </NavLink>
                               ))}
@@ -182,8 +184,8 @@ const Navbar = () => {
                   </div>
                 </div>
                 <p onClick={toggleDropdown} className="dropdownClose">
-                    X
-                  </p>
+                  X
+                </p>
               </motion.div>
             )}
           </AnimatePresence>{" "}
@@ -193,11 +195,15 @@ const Navbar = () => {
       <div className="NavbarSm">
         <div className="topBarSm flex-center">
           <div className="topBarSmContent flex-center">
-            <button>Enquiry Now</button>
-            <button className="smCallBtn">Call Us</button>
+            <a onClick={() => setshowEnquiryForm(true)} className="flex-center">Enquiry Now</a>
+            <a href="tel:+44 (0) 203 149 8488" className="smCallBtn flex-center">Call Us</a>
           </div>
         </div>
-        <div className={`NavbarSmBlack ${showNavbar ? "show" : "hide"} flex-center`}>
+        <div
+          className={`NavbarSmBlack ${
+            showNavbar ? "show" : "hide"
+          } flex-center`}
+        >
           <div onClick={() => navigate("/")} className="navLogoSmContainer">
             <img src={assets.logo} alt="" className="navLogoSm" />
           </div>
@@ -213,23 +219,16 @@ const Navbar = () => {
         </div>
         <AnimatePresence>
           {hamburgerActive && (
-            <motion.div
-              initial={{ opacity: 0, x: -100 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -100 }}
-              transition={{ duration: 0.3, ease: "easeOut" }}
-              className="NavListSm"
-            >
+            <motion.div className={`NavListSm ${showNavbar ? "show" : "hide"}`}>
               {!showSmServiceNav ? (
-                <div className="NavListSmNormal one flex-center">
-                  <a onClick={() => setshowSmServiceNav(true)}>
-                    <p>
-                      SERVICES <span>&gt;</span>
-                    </p>
+                <div className="NavListSmNormal flex-center">
+                  <a>
+                    <p onClick={() => navigate("/services")}>SERVICES</p>
+                    <span onClick={() => setshowSmServiceNav(true)}>&gt;</span>
                   </a>
 
                   <NavLink to="/about-us">
-                    <p>ABOUT US </p>
+                    <p>ABOUT US</p>
                   </NavLink>
 
                   <NavLink to="/our-team">
@@ -240,50 +239,81 @@ const Navbar = () => {
                     <p>CONTACT US</p>
                   </NavLink>
                 </div>
+              ) : selectedService ? (
+                <div className="NavListSmNormal flex-center">
+                  <a onClick={() => setSelectedService(null)}>
+                    <p>
+                    {selectedService.name}
+                    </p>
+                    <span>&lt;</span>
+                  </a>
+                  <hr />
+
+                  {selectedService.subServices.map((subService, index) => (
+                    <NavLink
+                      key={index}
+                      to={`/services/${selectedService.url}/${subService.url}`}
+                      onClick={() => {
+                        setHamburgerActive(false);
+                        setshowSmServiceNav(false);
+                      }}
+                    >
+                      <p>{subService.name}</p>
+                    </NavLink>
+                  ))}
+                </div>
               ) : (
-                <div className="NavListSmNormal two flex-center">
+                <div className="NavListSmNormal flex-center">
                   <NavLink onClick={() => setshowSmServiceNav(false)}>
                     <p>
-                      <span>&lt;</span> SERVICE
+                      <span>&lt;</span> SERVICES
                     </p>
                   </NavLink>
 
                   <hr />
 
                   {ServicesData.map((service) => (
-                    <NavLink
-                      key={service.id}
-                      to={`services/${service.url}`}
-                      className="legalServiceNavSm flex-center"
-                      onClick={() => setHamburgerActive(!hamburgerActive)}
-                    >
-                      <p>
-                        <span>&gt;</span>
-                        {service.name.includes("Wills & Probate")
-                          ? "Wills & Probate"
-                          : service.name}
+                    <a key={service.id} className="legalServiceNavSm">
+                      <p
+                        onClick={() =>
+                          navigate(
+                            `/services/${service.name
+                              .toLowerCase()
+                              .replace(/\s+/g, "-")}`
+                          )
+                        }
+                      >
+                        {service.name}
                       </p>
-                    </NavLink>
+                      <span onClick={() => setSelectedService(service)}>
+                        &gt;
+                      </span>
+                    </a>
                   ))}
                 </div>
               )}
             </motion.div>
           )}
-        </AnimatePresence>{" "}
+        </AnimatePresence>
       </div>
 
       {/* Popup for Enquiry form */}
       {showEnquiryForm && (
-        <div className="enquiry-modal" onClick={() => setshowEnquiryForm(false)}>
+        <div
+          className="enquiry-modal"
+          onClick={() => setshowEnquiryForm(false)}
+        >
           <div className="enquiry-content" onClick={(e) => e.stopPropagation()}>
-            <button className="close-btn" onClick={() => setshowEnquiryForm(false)}>
+            <button
+              className="close-btn"
+              onClick={() => setshowEnquiryForm(false)}
+            >
               <img src={assets.close} alt="" />
             </button>
             <EnquiryForm />
           </div>
         </div>
       )}
-
     </>
   );
 };

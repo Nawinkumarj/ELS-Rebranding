@@ -14,7 +14,7 @@ const Contact = () => {
   return (
     <>
       <Banner
-        bannerImg={assets.Bannerbg}
+        bannerImg={assets.aboutbg}
         heading="contact us"
         content="lorem"
       />

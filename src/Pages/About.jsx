@@ -27,7 +27,7 @@ const About = () => {
   return (
     <div className="about-container">
       <Banner
-        bannerImg={assets.Bannerbg}
+        bannerImg={assets.aboutbg}
         heading="About us"
         content="description"
       />

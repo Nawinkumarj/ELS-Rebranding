@@ -22,7 +22,7 @@ const PrivacyPolicy = () => {
   return (
     <>
       <Banner
-        bannerImg={assets.Bannerbg}
+        bannerImg={assets.aboutbg}
         heading="Privacy Policy"
         content="Learn about our data policies and confidentiality practices."
       />

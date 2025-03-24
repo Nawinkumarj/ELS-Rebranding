@@ -6,7 +6,7 @@ const Careers = () => {
   return (
     <div className="careers-container">
       <Banner
-        bannerImg={assets.Bannerbg}
+        bannerImg={assets.careerbg}
         heading="Careers"
         content="description"
       />

@@ -38,7 +38,7 @@ const Service = () => {
   return (
     <div className="service-container">
       <Banner
-        bannerImg={assets.Bannerbg}
+        bannerImg={selectedService.bannerImg}
         heading={selectedService.name}
         content={selectedService.description}
         button="Explore now"
@@ -50,9 +50,9 @@ const Service = () => {
             <img src={assets.ServiceMain} />
           </div>
 
-          <div className="service-list-mobile">
+          {/* <div className="service-list-mobile">
             <div className="dropdown-container">
-              {/* Dropdown Header */}
+              
               <div
                 className={`dropdown-header ${isOpen ? "open" : ""}`}
                 onClick={() => setIsOpen(!isOpen)}
@@ -74,12 +74,10 @@ const Service = () => {
                 </p>
               </div>
 
-              {/* Dropdown Items */}
-
               <div className={`dropdown-list ${isOpen ? "open" : ""}`}>
                 {ServicesData.filter(
                   (service) => service.name !== selectedService.name
-                ) //exclude selected item
+                ) 
                   .map((service, index) => (
                     <div
                       key={index}
@@ -103,7 +101,7 @@ const Service = () => {
                   ))}
               </div>
             </div>
-          </div>
+          </div> */}
 
           <div className="service-section">
             <div className="service-section-head">
@@ -121,7 +119,7 @@ const Service = () => {
             </div>
           </div>
         </div>
-        <div className="service-bottom">
+        {/* <div className="service-bottom">
           <div className="service-list">
             {ServicesData.map((service) => (
               <div
@@ -143,7 +141,7 @@ const Service = () => {
               </div>
             ))}
           </div>
-        </div>
+        </div> */}
         <ServiceSection
           selectedService={selectedService}
           ref={serviceSectionRef}

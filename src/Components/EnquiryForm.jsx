@@ -21,7 +21,7 @@ const EnquiryForm = () => {
 
     if (!formData.firstName.trim())
       newErrors.firstName = "First name is required";
-    if (!formData.firstName.trim() < 3)
+    if (formData.firstName.trim().length < 3)
       newErrors.firstName = "Enter a valid First Name";
     if (!formData.lastName.trim()) newErrors.lastName = "Last name is required";
     if (!formData.email.trim()) {

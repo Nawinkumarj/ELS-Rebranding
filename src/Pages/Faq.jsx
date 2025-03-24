@@ -96,7 +96,7 @@ const FAQ = () => {
 
   return (
     <div>
-      <Banner bannerImg={assets.Bannerbg} />
+      <Banner bannerImg={assets.faqbg} />
       <div className="faq-container">
         {/* <div className="faq-bg-img">
           <img src={assets.FaqBg} alt="" />
@@ -110,8 +110,8 @@ const FAQ = () => {
             >
               <div className="faq-header">
                 <h3>{faq.question}</h3>
-                <span className={`arrow ${faq.open ? "rotate" : ""}`}>
-                  &#8599;
+                <span className="arrow">
+                <img className="downarrow" src={assets.downarrow} alt="" />
                 </span>
               </div>
               <div className="faq-answer">

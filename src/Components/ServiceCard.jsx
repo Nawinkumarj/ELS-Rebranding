@@ -2,7 +2,7 @@ import React from 'react';
 import { assets } from '../assets/assets';
 import { useNavigate } from 'react-router-dom';
 
-const ServiceCard = ({ serviceName ,serviceUrl }) => {
+const ServiceCard = ({ serviceName ,serviceUrl, servicebg }) => {
 
   const navigate = useNavigate();
 
@@ -10,7 +10,7 @@ const ServiceCard = ({ serviceName ,serviceUrl }) => {
     <div className="serviceCardContainer">
 
       <div className='serviceCardImg'>
-        <img src={assets.ServiceCard_Img} alt="" />
+        <img src={servicebg} alt="" />
       </div>
 
       <div className='serviceCardContent'>
