@@ -16,7 +16,6 @@ const Contact = () => {
       <Banner
         bannerImg={assets.aboutbg}
         heading="contact us"
-        content="lorem"
       />
       <div className="wrapper">
         <div className="info-section">

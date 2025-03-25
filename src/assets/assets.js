@@ -26,14 +26,14 @@ import Hero_Video from "./mainvideo.mp4"
 
 // Team
 import elsteam from"./els_team.jpg"
-import Team1 from "./t-1.jpg";
-import Team2 from "./t-2.jpg";
-import Team3 from "./t-3.jpg";
-import Team4 from "./t-4.jpg";
-import Team5 from "./t-5.jpg";
-import Team6 from "./t-6.jpg";
-import Team7 from "./t-7.jpg";
-import Team8 from "./t-8.jpg";
+import Team1 from "./t-1.png";
+import Team2 from "./t-2.png";
+import Team3 from "./t-3.png";
+import Team4 from "./t-4.png";
+import Team5 from "./t-5.png";
+import Team6 from "./t-6.png";
+import Team7 from "./t-7.png";
+import Team8 from "./t-8.png";
 
 
 // Service

@@ -16,7 +16,7 @@ export const TeamData = [
     },
     {
         name : "Ishrat Khan",
-        position : "Head of compliance",
+        position : "Head of Compliance",
         image : assets.Team3,
         description : "Ishrat Khan is a highly skilled legal professional with over a decade of international in-house experience in banking and regulatory compliance."
     },
@@ -40,7 +40,7 @@ export const TeamData = [
     },
     {
         name : "Vikram Kambo",
-        position : "paralegal",
+        position : "Paralegal",
         image : assets.Team7,
         description : "Vikram Kambo graduated with First Class Honours in his LLB in September 2024. With a robust foundation in legal principles and corporate governance, he also excels in digital marketing and AI technology."
     },

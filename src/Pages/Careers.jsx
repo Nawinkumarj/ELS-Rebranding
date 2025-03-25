@@ -8,7 +8,6 @@ const Careers = () => {
       <Banner
         bannerImg={assets.careerbg}
         heading="Careers"
-        content="description"
       />
       <div className="careers-section">
         <p className="careers-text1">

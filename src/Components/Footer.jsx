@@ -37,7 +37,7 @@ const Footer = () => {
             <div className="footer-section1-icons">
               <div className="footer-icons">
                 <a
-                  href="https://www.linkedin.com"
+                  href="https://www.linkedin.com/company/elslegal/?viewAsMember=true"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -46,7 +46,7 @@ const Footer = () => {
               </div>
               <div className="footer-icons">
                 <a
-                  href="https://www.instagram.com"
+                  href="https://www.instagram.com/elslegal/?hl=en"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -55,16 +55,7 @@ const Footer = () => {
               </div>
               <div className="footer-icons">
                 <a
-                  href="https://www.twitter.com"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <img src={assets.twitter} alt="Twitter" />
-                </a>
-              </div>
-              <div className="footer-icons">
-                <a
-                  href="https://www.facebook.com"
+                  href="https://www.facebook.com/profile.php?id=100089853312850&locale=en_GB"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -75,7 +66,7 @@ const Footer = () => {
           </div>
           <div className="footer-section2">
             <div className="footer-section2-logo">
-              <img src={assets.logo} />
+             <Link to='/'> <img src={assets.logo} /> </Link>
             </div>
             <div className="footer-section2-certificate">
               <SRABadge />

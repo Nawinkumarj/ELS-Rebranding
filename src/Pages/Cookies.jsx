@@ -25,7 +25,6 @@ const Cookies = () => {
       <Banner
         bannerImg={assets.aboutbg}
         heading="Cookies Policy"
-        content="lorem "
       />
       <div>  </div>
       <div className="cookies-container">

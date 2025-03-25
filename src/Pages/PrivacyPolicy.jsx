@@ -24,7 +24,7 @@ const PrivacyPolicy = () => {
       <Banner
         bannerImg={assets.aboutbg}
         heading="Privacy Policy"
-        content="Learn about our data policies and confidentiality practices."
+        // content="Learn about our data policies and confidentiality practices."
       />
       <div className="cookies-container">
         {/* Sidebar Navigation */}
