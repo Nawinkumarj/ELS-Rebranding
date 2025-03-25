@@ -169,7 +169,7 @@
 @media (max-width: 425px) {
   .NavbarSm .NavListSm {
     width: 80%;
-    padding: 50px 0 25px 10px;
+    padding: 50px 0 25px 30px;
   }
   .NavbarSm .NavListSm .NavListSmNormal a p {
     font-size: 20px;

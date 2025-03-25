@@ -474,7 +474,7 @@ a {
 }
 
 .NavbarSm .NavListSm .NavListSmNormal a span {
-  margin: auto 15px;
+  margin-right: 25px !important;
 }
 
 .NavbarSm .NavListSm .NavListSmNormal a.active p {

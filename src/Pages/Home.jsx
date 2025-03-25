@@ -96,7 +96,7 @@ const Home = () => {
         {ServicesData.map((service) => (
           <ServiceCard key={service.id} serviceName={service.name} servicebg={service.serviceBg} serviceUrl={service.url} />
         ))}
-      </div>x
+      </div>
 
       <ChooseUs />
 
