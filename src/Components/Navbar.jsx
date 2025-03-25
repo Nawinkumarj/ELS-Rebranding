@@ -271,6 +271,7 @@ const Navbar = () => {
                       onClick={() => {
                         setHamburgerActive(false);
                         setshowSmServiceNav(false);
+                        setHamburgerActive(!hamburgerActive);
                       }}
                     >
                       <p>{subService.name}</p>
@@ -290,12 +291,14 @@ const Navbar = () => {
                   {ServicesData.map((service) => (
                     <a key={service.id} className="legalServiceNavSm">
                       <p
-                        onClick={() =>
+                        onClick={() => {
                           navigate(
                             `/services/${service.name
                               .toLowerCase()
                               .replace(/\s+/g, "-")}`
-                          )
+                          );
+                          setHamburgerActive(!hamburgerActive);
+                        }
                         }
                       >
                         {service.name}

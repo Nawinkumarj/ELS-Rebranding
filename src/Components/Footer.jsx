@@ -82,7 +82,7 @@ const Footer = () => {
             </div>
           </div>
           <div className="footer-section3">
-            <Link to="/services/family-law" className="footer-link">
+            <Link to="/services" className="footer-link">
               <div className="footer-section3-list">
                 <div className="list-name">
                   <h1>Services</h1>

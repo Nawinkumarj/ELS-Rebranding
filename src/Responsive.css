@@ -417,13 +417,16 @@
     flex-wrap: wrap;
     justify-content: center;
     flex-direction: column;
+    text-align: center;
+    background-color: #13a000;
+    width: 100%;
   }
   .team-member-card{
-    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    margin: 20px auto;
   }
   /* Language spoken */
   .langContainer{
