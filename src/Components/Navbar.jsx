@@ -244,15 +244,15 @@ const Navbar = () => {
                     <span onClick={() => setshowSmServiceNav(true)}>&gt;</span>
                   </a>
 
-                  <NavLink to="/about-us">
+                  <NavLink to="/about-us" onClick={()=> setHamburgerActive(!hamburgerActive)}>
                     <p>ABOUT US</p>
                   </NavLink>
 
-                  <NavLink to="/our-team">
+                  <NavLink to="/our-team" onClick={()=> setHamburgerActive(!hamburgerActive)}>
                     <p>OUR TEAM</p>
                   </NavLink>
 
-                  <NavLink to="/contact-us">
+                  <NavLink to="/contact-us" onClick={()=> setHamburgerActive(!hamburgerActive)}>
                     <p>CONTACT US</p>
                   </NavLink>
                 </div>

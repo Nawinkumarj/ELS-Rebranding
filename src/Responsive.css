@@ -412,6 +412,9 @@
 
 /* Out Team */
 @media (max-width: 768px) {
+  .team-heading{
+    position: absolute;
+  }
   .team-members-cards{
     display: flex;
     flex-wrap: wrap;
