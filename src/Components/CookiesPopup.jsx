@@ -27,7 +27,7 @@ const CookiesPopup = () => {
           transition={{ duration: 0.4, ease: "easeOut" }}
           className="cookiesPopup"
         >
-            <h3>🍪Our website uses cookies</h3>
+            <h3>Our website uses cookies</h3>
             <p>Our website use cookies. By continuing, we assume your permission to deploy cookies as detailed in out <Link to='/privacy-policy'>Privacy Policy</Link></p>
             <div className='cookiesBtn flex-center'>
                 <button onClick={acceptCookies} className='acceptBtn'>
