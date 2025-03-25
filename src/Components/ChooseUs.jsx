@@ -30,7 +30,7 @@ const ChooseUs = () => {
 
   return (
     <div className="chooseUsContainer">
-      <h1 ref={(el) => (colorRefs.current[0] = el)} className="sectionTitle">Why Choose Exchange Legal Services?</h1>
+      <h1 ref={(el) => (colorRefs.current[0] = el)} className="sectionTitle">Why Choose Expert Legal Solutions?</h1>
       {chooseUsData.map((item, choose) => (
         <div className="chooseUsList flex-center"  key={choose}>
           <div className="leftside flex-center">
