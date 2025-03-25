@@ -102,8 +102,10 @@ const Navbar = () => {
                 animate={{ opacity: 1, y: 0, x: "5%" }}
                 exit={{ opacity: 0, y: 10 }}
                 transition={{ duration: 0.3, ease: "easeOut" }}
-                className={`serviceDropDownContainer flex-center ${showNavbar ? 'show' : 'hide'}`} >
-
+                className={`serviceDropDownContainer flex-center ${
+                  showNavbar ? "show" : "hide"
+                }`}
+              >
                 {/* <div className="dropdownBG">
                 <img src={assets.dropdownBG} alt="" />
               </div> */}
@@ -195,8 +197,15 @@ const Navbar = () => {
       <div className="NavbarSm">
         <div className="topBarSm flex-center">
           <div className="topBarSmContent flex-center">
-            <a onClick={() => setshowEnquiryForm(true)} className="flex-center">Enquiry Now</a>
-            <a href="tel:+44 (0) 203 149 8488" className="smCallBtn flex-center">Call Us</a>
+            <a onClick={() => setshowEnquiryForm(true)} className="flex-center">
+              Enquiry Now
+            </a>
+            <a
+              href="tel:+44 (0) 203 149 8488"
+              className="smCallBtn flex-center"
+            >
+              Call Us
+            </a>
           </div>
         </div>
         <div
@@ -223,7 +232,15 @@ const Navbar = () => {
               {!showSmServiceNav ? (
                 <div className="NavListSmNormal flex-center">
                   <a>
-                    <p onClick={() => navigate("/services")}>SERVICES</p>
+                    <p
+                      onClick={() => {
+                        navigate("/services");
+                        setHamburgerActive(!hamburgerActive);
+                      }}
+                    >
+                      SERVICES
+                    </p>
+
                     <span onClick={() => setshowSmServiceNav(true)}>&gt;</span>
                   </a>
 
@@ -242,9 +259,7 @@ const Navbar = () => {
               ) : selectedService ? (
                 <div className="NavListSmNormal flex-center">
                   <a onClick={() => setSelectedService(null)}>
-                    <p>
-                    {selectedService.name}
-                    </p>
+                    <p>{selectedService.name}</p>
                     <span>&lt;</span>
                   </a>
                   <hr />

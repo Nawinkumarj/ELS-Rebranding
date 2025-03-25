@@ -23,7 +23,7 @@ const Contact = () => {
           <div className="info-item">
             <img src={assets.CallIcon} alt="Phone" className="info-icon" />
             <a href="tel:+44 (0) 203 149 8488" className="info-text">
-              +44 (0) 203 149 8488
+              0203 149 8488
             </a>
           </div>
           <div className="info-item">
@@ -45,10 +45,10 @@ const Contact = () => {
           <div className="info-item">
             <img src={assets.EmailIcon} alt="Email" className="info-icon" />
             <a
-              href="mailto:info@exchangelegalservices.com"
+              href="mailto:info@els.legal"
               className="info-text"
             >
-              info@exchangelegalservices.com
+              info@els.legal
             </a>
           </div>
         </div>
