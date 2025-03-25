@@ -29,7 +29,7 @@ const App = () => {
     <Navbar />
     <Routes>
       <Route path="/" element={<Home />} />
-      <Route path="/services" element={<ServiceLandingPage />} />
+      <Route path="/services/" element={<ServiceLandingPage />} />
       <Route path="/services/:serviceUrl" element={<Service />} />
       <Route path="/services/:serviceUrl/:subServiceUrl" element={<SubServiceDetail />} />
       <Route path="/about-us" element={<About />} />

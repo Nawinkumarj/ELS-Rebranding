@@ -269,7 +269,6 @@ const Navbar = () => {
                       key={index}
                       to={`/services/${selectedService.url}/${subService.url}`}
                       onClick={() => {
-                        setHamburgerActive(false);
                         setshowSmServiceNav(false);
                         setHamburgerActive(!hamburgerActive);
                       }}
@@ -293,11 +292,12 @@ const Navbar = () => {
                       <p
                         onClick={() => {
                           navigate(
-                            `/services/${service.name
+                            `/services/${service.url
                               .toLowerCase()
                               .replace(/\s+/g, "-")}`
                           );
                           setHamburgerActive(!hamburgerActive);
+                          setshowSmServiceNav(false);
                         }
                         }
                       >

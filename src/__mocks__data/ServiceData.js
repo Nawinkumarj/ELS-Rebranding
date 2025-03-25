@@ -1100,12 +1100,12 @@ export const ServicesData = [
         contactInfo: "Book a free consultation to speak to our team today! ",
       },
 
-      {
-        url: "intellectual-property-disputes",
-        name: "Intellectual Property Disputes",
-        description:
-          "Representation in criminal cases and legal defense strategies.",
-      },
+      // {
+      //   url: "intellectual-property-disputes",
+      //   name: "Intellectual Property Disputes",
+      //   description:
+      //     "Representation in criminal cases and legal defense strategies.",
+      // },
 
       {
         url: "debt-recovery",

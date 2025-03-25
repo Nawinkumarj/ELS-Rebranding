@@ -380,7 +380,7 @@ a {
 }
 
 .NavbarSm .NavbarSmBlack .navLogoSm {
-  width: 200px;
+  width: 150px;
   margin-left: -20px;
 }
 
@@ -2121,7 +2121,7 @@ a {
   top: 50%;
   left: 10%;
   transform: translate(-10%, -50%);
-  background: rgba(255, 255, 255, 0.09);
+  background: rgba(0, 0, 0, 0.145);
   padding: 1rem 2rem;
   border-radius: 15px;
   backdrop-filter: blur(15px);

@@ -418,7 +418,6 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
-    background-color: #13a000;
     width: 100%;
   }
   .team-member-card{
@@ -427,6 +426,13 @@
     align-items: center;
     justify-content: center;
     margin: 20px auto;
+  }
+  .team-member-image{
+    width: 100%;
+    height: 410px;
+    object-fit: cover;
+    padding: 20px;
+    border-radius: 10px;
   }
   /* Language spoken */
   .langContainer{
