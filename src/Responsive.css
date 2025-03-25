@@ -445,7 +445,14 @@
   }
 }
 /* Out Team ends */
-
+/* Cookies starts */
+@media (max-width: 768px) {
+  .cookiesPopup{
+    right: 50%;
+    transform: translateX(50%) !important;
+  }
+}
+/* Cookies ends */
 
 
 
