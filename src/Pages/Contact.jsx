@@ -56,7 +56,7 @@ const Contact = () => {
           <div className="social-box">
             <div className="social-logo">
               <a
-                href="https://www.instagram.com"
+                href="https://www.instagram.com/elslegal/?hl=en"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -69,14 +69,13 @@ const Contact = () => {
             </div>
             <div className="social-content">
               <span className="social-title">Instagram</span>
-              <p className="social-desc">Lorem ipsum text</p>
             </div>
           </div>
 
           <div className="social-box right-icon">
             <div className="social-logo">
               <a
-                href="https://www.facebook.com"
+                href="https://www.facebook.com/profile.php?id=100089853312850&locale=en_GB"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -89,14 +88,13 @@ const Contact = () => {
             </div>
             <div className="social-content">
               <span className="social-title">Facebook</span>
-              <p className="social-desc">Lorem ipstext</p>
             </div>
           </div>
 
           <div className="social-box">
             <div className="social-logo">
               <a
-                href="https://www.linkedin.com"
+                href="https://www.linkedin.com/company/elslegal/?viewAsMember=true"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -109,7 +107,6 @@ const Contact = () => {
             </div>
             <div className="social-content">
               <span className="social-title">LinkedIn</span>
-              <p className="social-desc">Lorem ipsum text</p>
             </div>
           </div>
         </div>

@@ -29,7 +29,6 @@ const About = () => {
       <Banner
         bannerImg={assets.aboutbg}
         heading="About us"
-        content="description"
       />
       <h1
         ref={(el) => (colorRefs.current[0] = el)}
