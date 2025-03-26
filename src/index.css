@@ -147,6 +147,12 @@ a {
   transition: .5s all;
 }
 
+.navbarSection,
+.NavbarSmBlack {
+  transition: transform 0.3s ease-in-out;
+  will-change: transform;
+}
+
 .navbarSection.hide,
 .NavbarSmBlack.hide {
   transform: translateY(-200%);
@@ -1476,6 +1482,7 @@ a {
 }
 
 .langContainer .langInsideContainer {
+  min-height: 400px;
   background-color: #3d0211;
   border-radius: 30px;
   transition: transform 0.3s;
