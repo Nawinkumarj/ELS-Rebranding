@@ -155,7 +155,7 @@ a {
 
 .navbarSection.hide,
 .NavbarSmBlack.hide {
-  transform: translateY(-200%);
+  transform: translateY(-30vh);
 }
 
 .navbarSection.show,
