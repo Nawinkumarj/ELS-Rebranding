@@ -31,19 +31,18 @@ const Navbar = () => {
   }, []);
 
   useEffect(() => {
-    let ticking = false;
-
     const handleScroll = () => {
-      if (!ticking) {
-        requestAnimationFrame(() => {
-          setShowNavbar(window.scrollY < lastScrollY);
-          setLastScrollY(window.scrollY);
-          ticking = false;
-        });
-        ticking = true;
+      const currentScrollY = Math.max(0, document.documentElement.scrollTop || document.body.scrollTop);
+    
+      if (currentScrollY <= 0) {
+        setShowNavbar(true);
+      } else {
+        setShowNavbar(currentScrollY < lastScrollY);
       }
+    
+      setLastScrollY(currentScrollY);
     };
-  
+
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, [lastScrollY]);
