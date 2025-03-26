@@ -145,6 +145,9 @@
   .confirmCheckBox {
     gap: 30px;
   }
+  .close-btn{
+    right: 40px;
+  }
 }
 
 /* ENGUIRY FROM END */
