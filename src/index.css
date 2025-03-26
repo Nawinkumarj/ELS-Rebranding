@@ -155,7 +155,7 @@ a {
 
 .navbarSection.hide,
 .NavbarSmBlack.hide {
-  transform: translateY(-30vh);
+  transform: translateY(-200%);
 }
 
 .navbarSection.show,
@@ -1491,6 +1491,7 @@ a {
   justify-content: space-between;
   align-items: center;
   flex-direction: column;
+  padding-bottom: 20px;
 }
 
 .langContainer .langInsideContainer .langTop {
