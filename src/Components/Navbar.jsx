@@ -6,6 +6,7 @@ import { ServicesData } from "../__mocks__data/ServiceData";
 import EnquiryForm from "./EnquiryForm";
 
 const Navbar = () => {
+  
   const navigate = useNavigate();
   const dropdownRef = useRef(null);
 
