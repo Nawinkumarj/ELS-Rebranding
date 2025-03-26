@@ -42,17 +42,17 @@ const LangSpoken = () => {
         </div>
         <div className="langItem">
           <ul>
-            <li>Tamil</li>
-            <li>Arabic</li>
             <li>English</li>
             <li>French</li>
             <li>Gujarati</li>
             <li>Hindi</li>
-            <li>Malayam</li>
-            <li>Mauritian Creole</li>
+            <li>Arabic</li>
+            <li>Tamil</li>
             <li>Punjabi</li>
-            <li>Sinhalese</li>
             <li>Urdu</li>
+            <li>Malayam</li>
+            <li>Sinhalese</li>
+            <li>Mauritian Creole</li>
           </ul>
           <p>
             Based on your needs, we can provide interpreters and translators if

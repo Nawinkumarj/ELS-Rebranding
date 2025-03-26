@@ -1476,12 +1476,14 @@ a {
 }
 
 .langContainer .langInsideContainer {
-  /* width: 85%; */
-  height: 50%;
   background-color: #3d0211;
   border-radius: 30px;
   transition: transform 0.3s;
   transform-style: preserve-3d;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
 }
 
 .langContainer .langInsideContainer .langTop {
