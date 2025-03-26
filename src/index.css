@@ -29,9 +29,11 @@
   height: 90%;
   overflow: scroll;
 }
-.enquiry-content::-webkit-scrollbar{
+
+.enquiry-content::-webkit-scrollbar {
   display: none;
 }
+
 .close-btn {
   position: absolute;
   top: 60px;
@@ -44,10 +46,12 @@
   color: var(--primary-color);
   z-index: 100;
 }
-.close-btn img{
+
+.close-btn img {
   width: 100%;
   height: 100%;
 }
+
 /* Default START */
 
 .googleReview {
@@ -144,14 +148,12 @@ a {
 }
 
 .navbarSection.hide,
-.NavbarSmBlack.hide 
-{
+.NavbarSmBlack.hide {
   transform: translateY(-200%);
 }
 
 .navbarSection.show,
-.NavbarSmBlack.show 
-{
+.NavbarSmBlack.show {
   transform: translateY(0);
 }
 
@@ -602,6 +604,7 @@ a {
 
 .chooseUsContainer .chooseUsList {
   width: 90%;
+  height: 200px;
   background-color: white;
   margin: 30px auto;
   padding: 20px;
@@ -1297,6 +1300,7 @@ a {
   gap: 50px;
   display: none;
 }
+
 .ourJourneyPathSm p {
   color: white;
   font-family: var(--content);
@@ -1304,9 +1308,11 @@ a {
   line-height: 30px;
   text-align: justify;
 }
+
 .journey-title {
   padding: 25px 10px;
 }
+
 .journeyPathImgContainer {
   width: 70%
 }
@@ -1679,10 +1685,12 @@ a {
   color: var(--primary-color);
   transform: rotate(100deg);
 }
-.downarrow{
+
+.downarrow {
   width: 10px !important;
   transform: rotate(-10deg);
 }
+
 /* FAQ Answer */
 .faq-answer {
   max-height: 0;
@@ -1896,15 +1904,15 @@ a {
 
 .social-title {
   font-weight: bold;
-  font-family:var(--heading);
-  
+  font-family: var(--heading);
+
 }
 
 .social-desc {
   font-size: 12px;
   color: gray;
   font-family: var(--content);
- 
+
 }
 
 .social-logo {
@@ -2167,7 +2175,7 @@ a {
   font-size: 20px;
   font-weight: 800;
   cursor: pointer;
-  color:black;
+  color: black;
 }
 
 .banner-section-main {
@@ -2737,8 +2745,8 @@ a {
 
 .sect2-content-l {
   width: 95%;
-  margin:auto;
-  padding:3rem 0;
+  margin: auto;
+  padding: 3rem 0;
 }
 
 .sect2-content-l-list {
@@ -2747,7 +2755,7 @@ a {
   padding-bottom: 2rem;
 }
 
-.sect2-content-l-head{
+.sect2-content-l-head {
   padding-bottom: 0.3rem;
 }
 

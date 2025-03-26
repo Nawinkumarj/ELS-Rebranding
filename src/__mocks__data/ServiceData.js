@@ -18,7 +18,7 @@ export const ServicesData = [
       {
         url: "contentious-divorce",
         name: "Contentious Divorce",
-        description: "Content will be updated soon.",
+         
         subContent1:
           "ELS Legal understands that contentious divorces can be emotionally and legally complex.",
         subContent2:
@@ -90,7 +90,7 @@ export const ServicesData = [
       {
         url: "non-contentious-divorce",
         name: "Non-Contentious Divorce",
-        description: "Content will be updated soon.",
+         
         subContent1:
           "We understand that not all divorces need to be contentious. ",
         subContent2:
@@ -161,8 +161,8 @@ export const ServicesData = [
 
       {
         url: "child-contact-arrangements",
-        name: "Child contact arrangements",
-        description: "Content will be updated soon.",
+        name: "Child Contact Arrangements",
+         
         subContent1:
           "At ELS, we know that child contact arrangements are a critical aspect of family law.",
         subContent2:
@@ -233,8 +233,8 @@ export const ServicesData = [
 
       {
         url: "Cohabitation Disputes",
-        name: "cohabitation-disputes",
-        description: "Content will be updated soon.",
+        name: "Cohabitation Disputes",
+         
         subContent1:
           "We know that cohabitation disputes can be emotionally and legally complex. ",
         subContent2:
@@ -304,9 +304,9 @@ export const ServicesData = [
       },
 
       {
-        url: "financial-proceedings-and-division-of-assets",
-        name: "Financial Proceedings and division of assets",
-        description: "Content will be updated soon.",
+        url: "financial-proceedings",
+        name: "Financial Proceedings",
+         
         subContent1:
           "ELS understands that financial proceedings can be a critical aspect of family law.",
         subContent2:
@@ -376,9 +376,80 @@ export const ServicesData = [
       },
 
       {
+        url: "division-of-assets",
+        name: "Division of Assets",
+         
+        subContent1:
+          "Dividing assets can be one of the most contentious aspects of a divorce or separation.",
+        subContent2:
+          "Our experienced team is here to provide you with clear, practical advice with robust representation to ensure your financial interests are protected.",
+        serviceListHead: "Our support is comprehensive for asset division:",
+        serviceList: [
+          {
+            title: "Legal Advice",
+            description:
+              "We provide clear and practical advice on your rights and options regarding the division of assets",
+          },
+          {
+            title: "Asset Valuation",
+            description:
+              "We assist with the valuation of marital assets, including property, investments, and businesses",
+          },
+          {
+            title: "Negotiation & Mediation",
+            description:
+              "We facilitate negotiation and mediation to reach fair and equitable asset division agreements",
+          },
+          {
+            title: "Court Representation",
+            description:
+              "We represent you in court if litigation becomes necessary, ensuring your assets are protected",
+          },
+          {
+            title: "Enforcement of Orders",
+            description:
+              "We advise on the enforcement of asset division if one party fails to comply",
+          },
+        ],
+        approch: [
+          "We take a compassionate but logical approach to the division of assets.",
+
+          "We work closely with you to understand your specific situation and provide tailored advice with representation aligning with your goals.",
+
+          "Our team is committed to achieving fair and satisfactory outcomes for all parties involved.",
+        ],
+        whyChooseus: [
+          {
+            title: "Expertise",
+            content:
+              "Our team has extensive experience in handling asset divisions, ensuring all legal elements are complied with",
+          },
+          {
+            title: "Personalised Service",
+            content:
+              "We take the time to understand your specific needs and tailor our advice accordingly.",
+          },
+          {
+            title: "Client-Focused",
+            content:
+              "We prioritise your interests and work diligently to achieve the best possible outcome for you.",
+          },
+          {
+            title: "Free Consultation",
+            content:
+              "We offer a free initial consultation to discuss your case and explore how we can assist you.",
+          },
+        ],
+        contact:
+          "If you require assistance with division of assets, don’t hesitate to reach out to us. ",
+        contactInfo:
+          "Contact ELS Legal to schedule your free initial consultation and let us help you navigate the waters of asset division.",
+      },
+
+      {
         url: "injunctions",
         name: "Injunctions",
-        description: "Content will be updated soon.",
+         
         subContent1:
           "Injunctions can be a necessary measure to protect your rights and safety. ",
         subContent2:
@@ -449,7 +520,7 @@ export const ServicesData = [
       {
         url: "prenuptial-agreements",
         name: "Prenuptial Agreements",
-        description: "Content will be updated soon.",
+         
         subContent1:
           "Prenuptial agreements can provide peace of mind and financial security for couples entering into a marriage. ",
         subContent2:
@@ -536,7 +607,7 @@ export const ServicesData = [
       {
         url: "wills",
         name: "Wills",
-        description: "Content will be updated soon.",
+         
         subContent1:
           "Having a legally accurate Will ensures your assets are distributed according to your wishes, rather than default inheritance laws.",
         subContent2:
@@ -594,7 +665,7 @@ export const ServicesData = [
       {
         url: "lasting-powers-of-attorney-financial-and-health",
         name: "Lasting Powers of Attorney: Financial and Health",
-        description: "Content will be updated soon.",
+         
         subContent1:
           "A Lasting Power of Attorney (LPA) allows you to appoint someone you trust to manage your affairs if you ever lose mental capacity due to illness, injury, or old age.",
         subContent2:
@@ -649,7 +720,7 @@ export const ServicesData = [
       {
         url: "deeds-of-variation",
         name: "Deeds of Variation",
-        description: "Content will be updated soon.",
+         
         subContent1:
           "A Deed of Variation allows beneficiaries to alter how an estate is distributed after a person’s death. ",
         subContent2:
@@ -704,7 +775,7 @@ export const ServicesData = [
       {
         url: "probate-and-estate-administration",
         name: "Probate and Estate Administration",
-        description: "Content will be updated soon.",
+         
         subContent1:
           "Probate involved the legal process of administering a deceased person’s estate. ",
         subContent2:
@@ -758,7 +829,7 @@ export const ServicesData = [
       {
         url: "trusts",
         name: "Trusts",
-        description: "Content will be updated soon.",
+         
         subContent1:
           "Trusts provide a secure way to manage assets for future generations whilst offering tax advantages. ",
         subContent2: "Content will be updated soon.",
@@ -810,7 +881,7 @@ export const ServicesData = [
       {
         url: "deputyships",
         name: "Deputyships",
-        description: "Content will be updated soon.",
+         
         subContent1:
           "If a loved one has lost mental capacity without an LPA, a deputyship allows you to manage their affairs legally. ",
         subContent2: "Content will be updated soon.",
@@ -864,7 +935,7 @@ export const ServicesData = [
       {
         url: "family-inheritance-disputes",
         name: "Family Inheritance Disputes",
-        description: "Content will be updated soon.",
+         
         subContent1:
           "Inheritance disputes can create tension among loved ones. ",
         subContent2: "Our guidance is solely focused on fair resolutions. ",
@@ -917,7 +988,7 @@ export const ServicesData = [
       {
         url: "inheritance-tax-guidance-and-tax-efficiency-on-offshore-trusts",
         name: "Inheritance Tax Guidance and Tax Efficiency on Offshore Trusts",
-        description: "Content will be updated soon.",
+         
         subContent1:
           "We know that inheritance tax can be very daunting, and the last thing you want to worry about, following the passing of a loved one. ",
         subContent2:
@@ -972,7 +1043,7 @@ export const ServicesData = [
       {
         url: "estate-planning",
         name: "Estate Planning",
-        description: "Content will be updated soon.",
+         
         subContent1:
           "Comprehensive estate planning ensures your assets are protected and passed on efficiently. ",
         subContent2: "content will be updated soon..",
@@ -1043,7 +1114,7 @@ export const ServicesData = [
       {
         url: "contract-disputes",
         name: "Contract Disputes ",
-        description: "Content will be updated soon.",
+         
         subContent1:
           "Contracts form the foundation of business and personal transactions. When a contract is breached, it can lead to major financial and operational losses.",
         subContent2:
@@ -1110,7 +1181,7 @@ export const ServicesData = [
       {
         url: "debt-recovery",
         name: "Debt Recovery",
-        description: "Content will be updated soon.",
+         
         subContent1:
           "Unpaid debts can disrupt cash flow and business operations. ",
         subContent2:
@@ -1164,7 +1235,7 @@ export const ServicesData = [
       {
         url: "professional-negligence-claims",
         name: "Professional Negligence Claims ",
-        description: "Content will be updated soon.",
+         
         subContent1:
           "When working professionals such as solicitors, accountants, surveyors, or financial advisors fail in their duty of care, their mistakes can cause significant financial losses or legal liabilities.",
         subContent2:
@@ -1218,7 +1289,7 @@ export const ServicesData = [
       {
         url: "clinical-negligence-claims",
         name: "Clinical Negligence Claims ",
-        description: "Content will be updated soon.",
+         
         subContent1:
           "Medical professionals must provide safe and competent care.",
         subContent2:
@@ -1274,7 +1345,7 @@ export const ServicesData = [
       {
         url: "defamation",
         name: "Defamation",
-        description: "Content will be updated soon.",
+         
         subContent1:
           "In today’s digital world, false accusations can damage reputations quickly.",
         subContent2:
@@ -1327,7 +1398,7 @@ export const ServicesData = [
       {
         url: "mediation",
         name: "Mediation",
-        description: "Content will be updated soon.",
+         
         subContent1:
           "Litigation is not always the best solution when resolving a dispute. It can get very expensive and be very time-consuming. ",
         subContent2:
@@ -2545,7 +2616,7 @@ export const ServicesData = [
     bannerImg: assets.corporatebg,
     subserviceBg: assets.familylaw,
     url: "business-commercial-and-corporate",
-    name: "Corporate Law",
+    name: "Business, Commercial and Corporate",
     description:
       "Navigating the complexities of business, commercial, and corporate industries is essential for the success and growth of your business. ",
     descriptionList: [

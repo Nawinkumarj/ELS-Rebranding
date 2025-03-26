@@ -21,7 +21,7 @@ const Contact = () => {
         <div className="info-section">
           <div className="info-item">
             <img src={assets.CallIcon} alt="Phone" className="info-icon" />
-            <a href="tel:+44 (0) 203 149 8488" className="info-text">
+            <a href="tel:+44 203 149 8488" className="info-text">
               0203 149 8488
             </a>
           </div>

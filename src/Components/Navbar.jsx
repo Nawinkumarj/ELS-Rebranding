@@ -71,7 +71,7 @@ const Navbar = () => {
         <div className="topBar flex-center">
           <button onClick={() => setshowEnquiryForm(true)}>Enquiry Now</button>
           <button>
-            <a href="tel:+44 (0) 203 149 8488">0203 149 8488</a>
+            <a href="tel:+44 203 149 8488">0203 149 8488</a>
           </button>
         </div>
 
@@ -201,7 +201,7 @@ const Navbar = () => {
               Enquiry Now
             </a>
             <a
-              href="tel:+44 (0) 203 149 8488"
+              href="tel:+44 203 149 8488"
               className="smCallBtn flex-center"
             >
               Call Us

@@ -84,6 +84,9 @@
   .chooseUsContainer .chooseUsList .leftside h3 {
     width: 100%;
   }
+  .chooseUsContainer .chooseUsList{
+    height: 100%;
+  }
 }
 
 @media (max-width: 640px) {
