@@ -41,6 +41,7 @@ const CookiesPopup = () => {
                     Accept all
                 </button>
                 <button onClick={manageCookies}>
+                  Mamage
                 </button>
             </div>
         </motion.div>
