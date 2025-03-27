@@ -5,6 +5,7 @@ import { Link, useNavigate } from "react-router-dom";
 
 const CookiesPopup = () => {
   const [isVisible, setIsVisible] = useState(false);
+
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -19,10 +20,6 @@ const CookiesPopup = () => {
     setIsVisible(false);
   };
 
-  const manageCookies = () => {
-    navigate('/cookies-settings');  // Navigate to the custom cookies settings page
-  };
-
   return (
     <AnimatePresence>
       {isVisible && (
@@ -33,19 +30,16 @@ const CookiesPopup = () => {
           transition={{ duration: 0.4, ease: "easeOut" }}
           className="cookiesPopup"
         >
-          <h3>Our website uses cookies</h3>
-          <p>
-            Our website uses cookies. By continuing, we assume your permission to deploy cookies as detailed in our{" "}
-            <Link to='/privacy-policy'>Privacy Policy</Link>
-          </p>
-          <div className='cookiesBtn flex-center'>
-            <button onClick={acceptCookies} className='acceptBtn'>
-              Accept all
-            </button>
-            <button onClick={manageCookies}>
-              Manage
-            </button>
-          </div>
+            <h3>Our website uses cookies</h3>
+            <p>Our website use cookies. By continuing, we assume your permission to deploy cookies as detailed in out <Link to='/privacy-policy'>Privacy Policy</Link></p>
+            <div className='cookiesBtn flex-center'>
+                <button onClick={acceptCookies} className='acceptBtn'>
+                    Accept all
+                </button>
+                <button onClick={()=> navigate('/cookie-policy')}>
+                    Cookies
+                </button>
+            </div>
         </motion.div>
       )}
     </AnimatePresence>
