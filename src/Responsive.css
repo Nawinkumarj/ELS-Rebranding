@@ -165,7 +165,7 @@
 
 @media (max-width: 640px) {
   .NavbarSm .NavListSm {
-    width: 80%;
+    width: 100%;
   }
   .NavbarSm .NavListSm .NavListSmNormal a p {
     font-size: 25px;
@@ -174,7 +174,7 @@
 
 @media (max-width: 425px) {
   .NavbarSm .NavListSm {
-    width: 80%;
+    width: 100%;
     padding: 50px 0 25px 30px;
   }
   .NavbarSm .NavListSm .NavListSmNormal a p {
@@ -767,6 +767,13 @@
 
   .banner-button button {
     font-size: 16px;
+  }
+}
+
+@media (max-width: 400px) {
+  .banner-section {
+    max-width: 100%;
+    width: 100%;
   }
 }
 

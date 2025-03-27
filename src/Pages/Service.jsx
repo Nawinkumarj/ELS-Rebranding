@@ -40,7 +40,9 @@ const Service = () => {
     <div className="service-container">
       <Banner
         bannerImg={selectedService.bannerImg}
-        heading={selectedService.name}
+        heading={selectedService.name.includes("Wills & Probate")
+          ? "Wills & Probate and Private Client"
+          : selectedService.name}
         content={selectedService.description}
         button="Explore now"
         onButtonClick={handleExploreClick}

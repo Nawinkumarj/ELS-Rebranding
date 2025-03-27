@@ -7,7 +7,6 @@ import { ServicesData } from "../__mocks__data/ServiceData";
 import EnquiryForm from "./EnquiryForm";
 
 const Navbar = () => {
-  
   const navigate = useNavigate();
   const dropdownRef = useRef(null);
 
@@ -34,14 +33,17 @@ const Navbar = () => {
 
   useEffect(() => {
     const handleScroll = () => {
-      const currentScrollY = Math.max(0, document.documentElement.scrollTop || document.body.scrollTop);
-    
+      const currentScrollY = Math.max(
+        0,
+        document.documentElement.scrollTop || document.body.scrollTop
+      );
+
       if (currentScrollY <= 0) {
         setShowNavbar(true);
       } else {
         setShowNavbar(currentScrollY < lastScrollY);
       }
-    
+
       setLastScrollY(currentScrollY);
     };
 
@@ -205,10 +207,7 @@ const Navbar = () => {
             <a onClick={() => setshowEnquiryForm(true)} className="flex-center">
               Enquiry Now
             </a>
-            <a
-              href="tel:+44 203 149 8488"
-              className="smCallBtn flex-center"
-            >
+            <a href="tel:+44 203 149 8488" className="smCallBtn flex-center">
               Call Us
             </a>
           </div>
@@ -236,38 +235,61 @@ const Navbar = () => {
             <motion.div className={`NavListSm ${showNavbar ? "show" : "hide"}`}>
               {!showSmServiceNav ? (
                 <div className="NavListSmNormal flex-center">
+                  <div className="top">
+                    <div className="flex-center">
+                      <p onClick={()=> setshowSmServiceNav(false)}>ALL</p>
+                    </div>
+                    <div className="navLine"></div>
+                  </div>
                   <a>
                     <p
                       onClick={() => {
-                        navigate("/services");
-                        setHamburgerActive(!hamburgerActive);
+                        setshowSmServiceNav(true);
                       }}
                     >
                       SERVICES
                     </p>
 
-                    <span onClick={() => setshowSmServiceNav(true)}>&gt;</span>
+                    <img src={assets.navarrow} alt="" />
                   </a>
 
-                  <NavLink to="/about-us" onClick={()=> setHamburgerActive(!hamburgerActive)}>
+                  <NavLink
+                    to="/about-us"
+                    onClick={() => setHamburgerActive(!hamburgerActive)}
+                  >
                     <p>ABOUT US</p>
                   </NavLink>
 
-                  <NavLink to="/our-team" onClick={()=> setHamburgerActive(!hamburgerActive)}>
+                  <NavLink
+                    to="/our-team"
+                    onClick={() => setHamburgerActive(!hamburgerActive)}
+                  >
                     <p>OUR TEAM</p>
                   </NavLink>
 
-                  <NavLink to="/contact-us" onClick={()=> setHamburgerActive(!hamburgerActive)}>
+                  <NavLink
+                    to="/contact-us"
+                    onClick={() => setHamburgerActive(!hamburgerActive)}
+                  >
                     <p>CONTACT US</p>
                   </NavLink>
                 </div>
               ) : selectedService ? (
                 <div className="NavListSmNormal flex-center">
-                  <a onClick={() => setSelectedService(null)}>
+                  <div className="top">
+                    <div className="flex-center">
+                      <p onClick={()=> setshowSmServiceNav(false)}>ALL &nbsp;&gt;</p>
+                      <p onClick={()=> setSelectedService(false)}>SERVICES &nbsp;&gt;</p>
+                      <p>{selectedService.name.includes("Wills & Probate")
+                          ? "Wills & Probate"
+                          : selectedService.name}</p>
+                    </div>
+                    <div className="navLine"></div>
+                  </div>
+                  <NavLink to={`/services/${selectedService.url}`}>
                     <p>{selectedService.name}</p>
-                    <span>&lt;</span>
-                  </a>
-                  <hr />
+                    <img src={assets.navarrow} alt="" />
+                  </NavLink>
 
                   {selectedService.subServices.map((subService, index) => (
                     <NavLink
@@ -279,38 +301,39 @@ const Navbar = () => {
                       }}
                     >
                       <p>{subService.name}</p>
+                      <img src={assets.navarrow} alt="" />
                     </NavLink>
                   ))}
                 </div>
               ) : (
                 <div className="NavListSmNormal flex-center">
-                  <NavLink onClick={() => setshowSmServiceNav(false)}>
-                    <p>
-                      <span>&lt;</span> SERVICES
-                    </p>
+                  <div className="top">
+                    <div className="flex-center">
+                      <p onClick={()=> setshowSmServiceNav(false)}>ALL &nbsp;&gt;</p>
+                      <p onClick={()=> setSelectedService(false)}>SERVICES</p>
+                    </div>
+                    <div className="navLine"></div>
+                  </div>
+                  <NavLink
+                    to="/services/"
+                  >
+                    <p>SERVICES</p>
+                    <img src={assets.navarrow} alt="" />
+                    
                   </NavLink>
-
-                  <hr />
 
                   {ServicesData.map((service) => (
                     <a key={service.id} className="legalServiceNavSm">
                       <p
                         onClick={() => {
-                          navigate(
-                            `/services/${service.url
-                              .toLowerCase()
-                              .replace(/\s+/g, "-")}`
-                          );
-                          setHamburgerActive(!hamburgerActive);
-                          setshowSmServiceNav(false);
-                        }
-                        }
+                          setSelectedService(service);
+                        }}
                       >
-                        {service.name}
+                        {service.name.includes("Wills & Probate")
+                          ? "Wills & Probate"
+                          : service.name}
                       </p>
-                      <span onClick={() => setSelectedService(service)}>
-                        &gt;
-                      </span>
+                    <img onClick={() => setSelectedService(service)} src={assets.navarrow} alt="" />
                     </a>
                   ))}
                 </div>

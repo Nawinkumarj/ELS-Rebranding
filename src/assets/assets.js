@@ -83,6 +83,7 @@ import subService_icon from './subservice-icon.svg'
 import subService_icon2 from "./subservice-icon2.svg";
 import dropdown_icon from './dropdown_icon.svg'
 import close from './letter-x.svg'
+import navarrow from './nav-arrow.svg'
 
 // Careers
 import Careers from "./career.svg";
@@ -171,4 +172,5 @@ export const assets = {
   downarrow,
   faqbg,
   aboutbg,
+  navarrow
 };

@@ -120,8 +120,8 @@ a {
 }
 
 .navbarContainer .topBar button {
-  width: 220px;
-  height: 50px;
+  width: 180px;
+  height: 40px;
   background-color: var(--primary-color);
   border: none;
   cursor: pointer;
@@ -234,7 +234,8 @@ a {
 .navbarSection .dropdownClose {
   cursor: pointer;
   position: absolute;
-  color: white;
+  color: red;
+  font-weight: 700;
   top: 15px;
   right: 15px;
 }
@@ -258,9 +259,6 @@ a {
 .dropdownNavList div {
   width: 100%;
   height: 100%;
-  /* border-radius: 15px; */
-  /* border: 2px solid var(--secondary-color); */
-  /* border-left:  1px solid var(--primary-color); */
   position: relative;
 }
 
@@ -379,6 +377,7 @@ a {
   padding-right: 20px;
   transition: .5s all;
   background-color: white;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
 
 .NavbarSm .NavbarSmBlack .navLogoSm {
@@ -441,7 +440,7 @@ a {
 
 .NavbarSm .NavListSm {
   position: absolute;
-  width: 50%;
+  width: 100%;
   top: 100%;
   right: 0;
   padding: 20px 25px 25px 40px;
@@ -471,23 +470,46 @@ a {
   color: white;
   font-size: 30px;
   font-family: var(--content);
-  font-weight: 700;
+  font-weight: 500;
   width: 100%;
 }
 
-.NavbarSm .NavListSm .NavListSmNormal a span {
+.NavbarSm .NavListSm .NavListSmNormal a img {
   margin-right: 25px !important;
+  width: 23px;
 }
 
 .NavbarSm .NavListSm .NavListSmNormal a.active p {
   color: var(--primary-color);
 }
 
-.NavListSmNormal hr {
-  width: 100%;
-  margin-top: -30px;
+.NavListSmNormal .top {
+  margin-top: -20px;
 }
 
+.NavListSmNormal .top .flex-center {
+  gap: 10px;
+  justify-content: start;
+  width: 100%;
+}
+
+.NavListSmNormal .top {
+  width: 100%;
+  font-family: var(--content);
+}
+
+.NavListSmNormal .top p {
+  margin-bottom: 10px;
+  text-transform: uppercase;
+  color: white;
+}
+
+.NavListSmNormal .top .navLine {
+  width: 1000% !important;
+  margin-left: -30px;
+  height: 1px;
+  background-color: white;
+}
 
 
 /* Navbar END */
@@ -943,22 +965,6 @@ a {
 /* ENGUIRY FROM END */
 
 /* Home END */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 /* About US Starts */
 .about-section {
@@ -2036,81 +2042,12 @@ a {
 }
 
 /* 404 ends */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Banner Starts */
 
 .banner-main {
   position: relative;
   width: 100%;
-  height: 50vh;
+  height: 60vh;
 }
 
 .banner-bg {
