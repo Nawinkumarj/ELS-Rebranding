@@ -54,7 +54,7 @@ const About = () => {
           </div>
           <div className="about-left-bottom">
             <div className="about-bottom-img">
-              <img src={assets.Team1} alt="" />
+              <img src={assets.abt} alt="" />
             </div>
             <span className="span1"></span>
             <span className="span2"></span>

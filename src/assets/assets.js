@@ -15,6 +15,7 @@ import subService_3 from "./subservice-3.svg";
 import dropdownBG from "./dropdownBG.svg";
 import subService_bg1 from "./subservice-bg1.svg"
 import journeyPathSm from "./journeyPathSmall.svg"
+import abt from './abt_img.jpeg'
 // import navListBG from "./navListBG.svg";
 // Breeadcrumbs
 import careerbg from './career.jpeg'
@@ -172,5 +173,6 @@ export const assets = {
   downarrow,
   faqbg,
   aboutbg,
-  navarrow
+  navarrow,
+  abt,
 };
