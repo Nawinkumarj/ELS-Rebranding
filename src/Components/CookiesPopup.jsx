@@ -20,6 +20,10 @@ const CookiesPopup = () => {
     setIsVisible(false);
   };
 
+  const manageCookies = () => {
+    window.location.href = 'chrome://settings/cookies';
+  }
+
   return (
     <AnimatePresence>
       {isVisible && (
@@ -36,8 +40,7 @@ const CookiesPopup = () => {
                 <button onClick={acceptCookies} className='acceptBtn'>
                     Accept all
                 </button>
-                <button onClick={()=> navigate('chrome://settings/cookies')}>
-                    Manage
+                <button onClick={manageCookies}>
                 </button>
             </div>
         </motion.div>
