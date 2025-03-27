@@ -1,10 +1,12 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 
 const CookiesPopup = () => {
   const [isVisible, setIsVisible] = useState(false);
+
+  const navigate = useNavigate();
 
   useEffect(() => {
     const cookiesAccepted = localStorage.getItem("cookiesAccepted");
@@ -34,9 +36,9 @@ const CookiesPopup = () => {
                 <button onClick={acceptCookies} className='acceptBtn'>
                     Accept all
                 </button>
-                <a href="chrome://settings/cookies">
+                <button onClick={()=> navigate('chrome://settings/cookies')}>
                     Manage
-                </a>
+                </button>
             </div>
         </motion.div>
       )}
