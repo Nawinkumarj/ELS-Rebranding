@@ -1,3 +1,8 @@
+/* eslint-disable no-unused-vars */
+import React, { useState, useEffect } from "react";
+import { motion, AnimatePresence } from "framer-motion";
+import { Link, useNavigate } from "react-router-dom";
+
 const CookiesPopup = () => {
   const [isVisible, setIsVisible] = useState(false);
   const navigate = useNavigate();
@@ -46,3 +51,5 @@ const CookiesPopup = () => {
     </AnimatePresence>
   );
 };
+
+export default CookiesPopup;
