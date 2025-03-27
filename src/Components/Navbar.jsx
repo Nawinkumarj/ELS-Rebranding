@@ -237,7 +237,7 @@ const Navbar = () => {
                 <div className="NavListSmNormal flex-center">
                   <div className="top">
                     <div className="flex-center">
-                      <p onClick={()=> setshowSmServiceNav(false)}>ALL</p>
+                      <p onClick={()=> setshowSmServiceNav(true)}>ALL</p>
                     </div>
                     <div className="navLine"></div>
                   </div>
@@ -245,6 +245,7 @@ const Navbar = () => {
                     <p
                       onClick={() => {
                         setshowSmServiceNav(true);
+                        setSelectedService(false);
                       }}
                     >
                       SERVICES
@@ -287,8 +288,10 @@ const Navbar = () => {
                     <div className="navLine"></div>
                   </div>
                   <NavLink to={`/services/${selectedService.url}`}>
-                    <p>{selectedService.name}</p>
-                    <img src={assets.navarrow} alt="" />
+                    <p onClick={() => { 
+                      setHamburgerActive(!hamburgerActive);
+                      setshowSmServiceNav(false);
+                    }}>{selectedService.name}</p>
                   </NavLink>
 
                   {selectedService.subServices.map((subService, index) => (
@@ -301,7 +304,6 @@ const Navbar = () => {
                       }}
                     >
                       <p>{subService.name}</p>
-                      <img src={assets.navarrow} alt="" />
                     </NavLink>
                   ))}
                 </div>
@@ -317,8 +319,10 @@ const Navbar = () => {
                   <NavLink
                     to="/services/"
                   >
-                    <p>SERVICES</p>
-                    <img src={assets.navarrow} alt="" />
+                    <p onClick={()=> { 
+                      setHamburgerActive(!hamburgerActive)
+                      setshowSmServiceNav(false)
+                    }}>SERVICES</p>
                     
                   </NavLink>
 
