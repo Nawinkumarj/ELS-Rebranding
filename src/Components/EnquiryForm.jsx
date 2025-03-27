@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
 import { assets } from "../assets/assets";
 import countries from "world-countries";
@@ -211,7 +212,7 @@ const EnquiryForm = () => {
             </label>
           </div>
           <p>
-            I am bound by the terms of the service and I accept the privacy
+            I am bound by the terms of the service and I accept the privacy
             policy. <span className="FormMandatory">*</span>
           </p>
         </div>
