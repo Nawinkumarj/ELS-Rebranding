@@ -34,9 +34,9 @@ const CookiesPopup = () => {
                 <button onClick={acceptCookies} className='acceptBtn'>
                     Accept all
                 </button>
-                <button>
+                <a href="chrome://settings/cookies">
                     Manage
-                </button>
+                </a>
             </div>
         </motion.div>
       )}
