@@ -1,11 +1,5 @@
-/* eslint-disable no-unused-vars */
-import React, { useState, useEffect } from "react";
-import { motion, AnimatePresence } from "framer-motion";
-import { Link, useNavigate } from "react-router-dom";
-
 const CookiesPopup = () => {
   const [isVisible, setIsVisible] = useState(false);
-
   const navigate = useNavigate();
 
   useEffect(() => {
@@ -21,8 +15,8 @@ const CookiesPopup = () => {
   };
 
   const manageCookies = () => {
-    window.location.href = 'chrome://settings/cookies';
-  }
+    navigate('/cookies-settings');  // Navigate to the custom cookies settings page
+  };
 
   return (
     <AnimatePresence>
@@ -34,20 +28,21 @@ const CookiesPopup = () => {
           transition={{ duration: 0.4, ease: "easeOut" }}
           className="cookiesPopup"
         >
-            <h3>Our website uses cookies</h3>
-            <p>Our website use cookies. By continuing, we assume your permission to deploy cookies as detailed in out <Link to='/privacy-policy'>Privacy Policy</Link></p>
-            <div className='cookiesBtn flex-center'>
-                <button onClick={acceptCookies} className='acceptBtn'>
-                    Accept all
-                </button>
-                <button onClick={manageCookies}>
-                  Mamage
-                </button>
-            </div>
+          <h3>Our website uses cookies</h3>
+          <p>
+            Our website uses cookies. By continuing, we assume your permission to deploy cookies as detailed in our{" "}
+            <Link to='/privacy-policy'>Privacy Policy</Link>
+          </p>
+          <div className='cookiesBtn flex-center'>
+            <button onClick={acceptCookies} className='acceptBtn'>
+              Accept all
+            </button>
+            <button onClick={manageCookies}>
+              Manage
+            </button>
+          </div>
         </motion.div>
       )}
     </AnimatePresence>
   );
 };
-
-export default CookiesPopup;
