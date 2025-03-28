@@ -1468,3 +1468,50 @@
 }
 
 /* Footer ends */
+
+
+/* Service landing page starts*/
+
+@media (max-width:768px){
+  .servicePage-main{
+    width:95%;
+  }
+
+  .servicePage-title h1 {
+    font-size: 28px;
+  }
+
+  .servicePage-descrip p{
+    font-size: 18px;
+  }
+
+  .servicePage-services-head h1{
+  font-size: 28px;
+  }
+
+  .servicePage-subserviceList-head h1{
+    font-size: 20px;
+  }
+
+  .servicePage-services-descrip p {
+    font-size: 18px !important;
+    line-height: 35px;
+  }
+
+  .servicePage-subserviceList-list {
+      padding-left: 1rem;
+  }
+
+  .servicePage-subserviceList-list p,
+  .servicePage-subserviceList-button p{
+      font-size: 18px;
+      padding-bottom: 0.5rem;
+      line-height:30px;
+  }
+
+  .subserviceList-button{
+    font-weight: 400;
+  }
+}
+
+/* Service landing page ends*/

@@ -51,14 +51,15 @@ const About = () => {
                 Punjani.
               </p>
             </div>
+            <span className="span1"></span>
           </div>
-          <div className="about-left-bottom">
+          {/* <div className="about-left-bottom">
             <div className="about-bottom-img">
               <img src={assets.abt} alt="" />
             </div>
             <span className="span1"></span>
             <span className="span2"></span>
-          </div>
+          </div> */}
         </div>
         <div className="aboutus-right">
           <div className="about-rightimg flex-center">

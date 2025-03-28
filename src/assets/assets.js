@@ -26,7 +26,7 @@ import aboutbg from './aboutbg.jpeg'
 import Hero_Video from "./mainvideo.mp4"
 
 // Team
-import elsteam from"./els_team.jpg"
+import elsteam from"./els_team.png"
 import Team1 from "./t-1.png";
 import Team2 from "./t-2.png";
 import Team3 from "./t-3.png";

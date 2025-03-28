@@ -201,6 +201,8 @@ const Navbar = () => {
         </div>
       </div>
 
+
+      {/* Mobile View Navbar */}
       <div className="NavbarSm">
         <div className="topBarSm flex-center">
           <div className="topBarSmContent flex-center">
