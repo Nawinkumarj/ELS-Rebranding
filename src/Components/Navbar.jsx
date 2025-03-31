@@ -360,7 +360,7 @@ const Navbar = () => {
               className="close-btn"
               onClick={() => setshowEnquiryForm(false)}
             >
-              <img src={assets.close} alt="" />
+              X
             </button>
             <EnquiryForm />
           </div>
