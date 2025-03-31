@@ -14,7 +14,7 @@ const ServiceLandingPage = () => {
   return (
     <div>
             <Banner
-        bannerImg={assets.ServiceCard_Img}
+        bannerImg={assets.HeroBG}
         heading={'Services'}
         content={'Explore our services and find the best one for you'}
       />
