@@ -40,7 +40,7 @@ const Ourteam = () => {
           { scale: 1, opacity: 1, duration: 1 }
         )
         .to(".team-heading", { autoAlpha: 0 })
-        .to(containerRef.current, { backgroundColor: "#0000002c" })
+        .to(containerRef.current, { backgroundColor: "#ffffff" })
         .to(
           [h1Ref.current, h2Ref.current],
           { opacity: 0, duration: 0.5 },

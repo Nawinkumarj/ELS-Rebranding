@@ -1426,13 +1426,20 @@
     height: 100px;
   }
 
-  .footer-section2 {
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    order: 3;
-    width: 100%;
+  footer-section2{
+    display:grid;
+    grid-template-columns:repeat(2, 1fr);
+    grid-template-rows:auto auto;
+    align-items:center;
+    justify-content:space-between;
+    order:3;
+    width:100%;
+    padding-bottom:2rem
   }
+    .footer-section2 > .footer-section2-image{
+      grid-column: span 2; 
+    }
+ 
   .footer-section1 {
     order: 2;
     width: 100%;
@@ -1463,7 +1470,7 @@
     }
     .footer-bottom-section3{
       position: absolute;
-      top:-160px;
+      top:-28px;
     }
 }
 

@@ -177,6 +177,7 @@ const EnquiryForm = () => {
                   {service.name}
                 </option>
               ))}
+              <option>Other</option>
             </select>
             {errors.service && <p className="error">{errors.service}</p>}
           </div>

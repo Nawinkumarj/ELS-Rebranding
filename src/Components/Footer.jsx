@@ -71,6 +71,9 @@ const Footer = () => {
             <div className="footer-section2-certificate">
               <SRABadge />
             </div>
+            <div className="footer-section2-image">
+              <img src={assets.alzeimer}/>
+            </div>
           </div>
           <div className="footer-section3">
             <Link to="/services" className="footer-link">
@@ -148,6 +151,9 @@ const Footer = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div className='waterMark flex-center'>
+        <a href='https://virtuai.billionairefrequencycode.com/' target="_blank">Developed By <span> BFC virtu ai</span></a>
       </div>
     </div>
   );

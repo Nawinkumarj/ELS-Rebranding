@@ -76,7 +76,7 @@ const Navbar = () => {
     <>
       <div className="navbarContainer">
         <div className="topBar flex-center">
-          <button onClick={() => setshowEnquiryForm(true)}>Enquiry Now</button>
+          <button onClick={() => setshowEnquiryForm(true)}>Enquire now</button>
           <button>
             <a href="tel:+44 203 149 8488">0203 149 8488</a>
           </button>
@@ -207,7 +207,7 @@ const Navbar = () => {
         <div className="topBarSm flex-center">
           <div className="topBarSmContent flex-center">
             <a onClick={() => setshowEnquiryForm(true)} className="flex-center">
-              Enquiry Now
+              Enquire now
             </a>
             <a href="tel:+44 203 149 8488" className="smCallBtn flex-center">
               Call Us
@@ -356,12 +356,12 @@ const Navbar = () => {
           onClick={() => setshowEnquiryForm(false)}
         >
           <div className="enquiry-content" onClick={(e) => e.stopPropagation()}>
-            <button
+            <p
               className="close-btn"
               onClick={() => setshowEnquiryForm(false)}
             >
-              X
-            </button>
+                  X
+            </p>
             <EnquiryForm />
           </div>
         </div>

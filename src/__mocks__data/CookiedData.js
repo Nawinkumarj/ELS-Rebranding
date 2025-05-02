@@ -51,8 +51,8 @@ const sections = [
     <div class="section-container">
       <p class="section-intro">
         If you have any questions or concerns about our use of cookies, please contact us at 
-         <a href="mailto:info@exchangelegalservices.com" class="custom-link" target="_blank" rel="noopener noreferrer">
-            info@exchangelegalservices.com
+         <a href="mailto:info@els.legal" class="custom-link" target="_blank" rel="noopener noreferrer">
+            info@els.legal
           </a>
       </p>
     </div>

@@ -27,7 +27,7 @@ const useScrollReveal = () => {
     });
   }, []);
 
-  return elementsRef; // Return the refs array
+  return elementsRef;
 };
 
 export default useScrollReveal;

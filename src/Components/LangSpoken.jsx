@@ -34,7 +34,7 @@ const LangSpoken = () => {
         <div className="langTop flex-center">Languages Spoken</div>
         <div className="langBottom">
           <h2>
-            At Exchange Legal Services, we recognise that clients often value
+            At ELs Legal, we recognise that clients often value
             the opportunity to communicate in their native language where
             possible. Our team is proud to speak 11 different languages, as
             detailed below.
@@ -44,10 +44,10 @@ const LangSpoken = () => {
           <ul>
             <li>English</li>
             <li>French</li>
+            <li>Tamil</li>
             <li>Gujarati</li>
             <li>Hindi</li>
             <li>Arabic</li>
-            <li>Tamil</li>
             <li>Punjabi</li>
             <li>Urdu</li>
             <li>Malayam</li>

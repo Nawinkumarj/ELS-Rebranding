@@ -1,10 +1,9 @@
 @import url("https://fonts.googleapis.com/css2?family=Crimson+Text:ital,wght@0,400;0,600;0,700;1,400;1,600;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Monoton&display=swap');
-
+@import url("https://fonts.googleapis.com/css2?family=Monoton&display=swap");
 
 @font-face {
-  font-family: 'Trajan';
-  src: url('/fonts/TrajanPro-Bold.otf') format('opentype');
+  font-family: "Trajan";
+  src: url("/fonts/TrajanPro-Bold.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
@@ -43,10 +42,9 @@
   width: 40px;
   height: 40px;
   cursor: pointer;
-  color: var(--primary-color);
+  color: white;
   z-index: 100;
   font-size: 20px;
-  font-family: 'Trajan';
   font-weight: 600;
 }
 
@@ -146,8 +144,9 @@ a {
   gap: 8px;
   background-color: white;
   position: relative;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
-  transition: .5s all;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+  transition: 0.5s all;
 }
 
 .navbarSection.hide,
@@ -238,9 +237,10 @@ a {
 }
 
 .navbarSection .dropdownClose {
+  font-size: 24px;
   cursor: pointer;
   position: absolute;
-  color: red;
+  color: white;
   font-weight: 700;
   top: 15px;
   right: 15px;
@@ -280,7 +280,7 @@ a {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  filter: blur(3px)
+  filter: blur(3px);
 }
 
 .dropdownNavList div .insideNavList {
@@ -303,7 +303,7 @@ a {
   font-family: var(--content);
   color: white;
   font-weight: 700;
-  transition: .5s all;
+  transition: 0.5s all;
   margin-bottom: 5px;
 }
 
@@ -322,7 +322,7 @@ a {
 
 .dropdownNavList .rightSide .insideNavList a:hover span {
   transform: rotate(-50deg);
-  transition: .5s all;
+  transition: 0.5s all;
 }
 
 .insideNavList a.chumma,
@@ -381,7 +381,7 @@ a {
   height: 100%;
   justify-content: space-between;
   padding-right: 20px;
-  transition: .5s all;
+  transition: 0.5s all;
   background-color: white;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 }
@@ -452,9 +452,14 @@ a {
   padding: 50px 0 25px 30px;
   z-index: 99;
   background: rgb(0, 0, 0);
-  background: linear-gradient(180deg, rgba(0, 0, 0, 1) 0%, rgba(102, 102, 102, 1) 100%);
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-  transition: .5s all;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 1) 0%,
+    rgba(102, 102, 102, 1) 100%
+  );
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
+    rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  transition: 0.5s all;
 }
 
 .NavbarSm .NavListSm .NavListSmNormal {
@@ -516,7 +521,6 @@ a {
   height: 1px;
   background-color: white;
 }
-
 
 /* Navbar END */
 
@@ -592,7 +596,6 @@ a {
   height: 100vh;
   object-fit: cover;
 }
-
 
 .homeContainer .heroContainer .heroTitle {
   position: absolute;
@@ -928,7 +931,7 @@ a {
   z-index: 100;
 }
 
-.checkBox input[type="checkbox"]:checked+div {
+.checkBox input[type="checkbox"]:checked + div {
   left: -10px;
   top: -10px;
 }
@@ -1020,7 +1023,7 @@ a {
   text-align: center;
   text-transform: uppercase;
   margin-bottom: -50px;
-  background-color: white
+  background-color: white;
 }
 
 .aboutus-left {
@@ -1334,7 +1337,7 @@ a {
 }
 
 .journeyPathImgContainer {
-  width: 70%
+  width: 70%;
 }
 
 /* Our Journey ends */
@@ -1455,9 +1458,11 @@ a {
   width: 100%;
   height: 100%;
   background: rgb(20, 21, 23);
-  background: linear-gradient(180deg,
-      rgba(20, 21, 23, 0.6685267857142857) 34%,
-      rgba(163, 5, 45, 1) 100%);
+  background: linear-gradient(
+    180deg,
+    rgba(20, 21, 23, 0.6685267857142857) 34%,
+    rgba(163, 5, 45, 1) 100%
+  );
   color: white;
   font-size: 1.2rem;
   display: flex;
@@ -1606,37 +1611,6 @@ a {
 
 /* Careers ends*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* Faq Container */
 /* Murali */
 
@@ -1738,7 +1712,6 @@ a {
   font-family: var(--content);
 }
 
-
 /* Cookies START*/
 .cookies-top-content {
   padding: 20px 50px;
@@ -1803,7 +1776,7 @@ a {
   color: #b30000;
   font-weight: 800;
   letter-spacing: 2px;
-  font-family: var(--heading)
+  font-family: var(--heading);
 }
 
 .section-list {
@@ -1855,7 +1828,6 @@ a {
   padding: 20px;
   height: 70vh;
 }
-
 
 .info-section {
   display: flex;
@@ -1929,14 +1901,12 @@ a {
 .social-title {
   font-weight: bold;
   font-family: var(--heading);
-
 }
 
 .social-desc {
   font-size: 12px;
   color: gray;
   font-family: var(--content);
-
 }
 
 .social-logo {
@@ -1958,7 +1928,6 @@ a {
 }
 
 /* contact form */
-
 
 /* map -container  */
 .map-container {
@@ -2299,7 +2268,6 @@ a {
   width: 100%;
 }
 
-
 .serviceSection-section3 {
   position: relative;
   margin-top: 10rem !important;
@@ -2412,7 +2380,10 @@ a {
   order: 2;
   width: 80%;
   margin: auto;
-
+}
+.footer-section2-image img {
+  width: 100%;
+  height: 100px;
 }
 
 .footer-section1-head h1 {
@@ -2447,7 +2418,6 @@ a {
   line-height: 28px;
   color: white;
 }
-
 
 .footer-section1-phone a {
   font-size: 16px;
@@ -2603,8 +2573,6 @@ a {
   margin: auto;
 }
 
-
-
 .footer-bottom-section3 {
   width: 80%;
 }
@@ -2626,7 +2594,27 @@ a {
   cursor: pointer;
   color: rgba(255, 255, 255, 0.523);
 }
-
+.waterMark {
+  width: 100%;
+  height: 30px;
+  text-align: center;
+  background-color: #000;
+  border-top: 1px solid var(--primary-color);
+}
+.waterMark a {
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-size: 13px;
+  color: gray;
+}
+.waterMark span {
+  transition: 0.5s;
+}
+.waterMark a:hover span {
+  color: #edc967;
+  transition: 0.5s;
+}
 /* Footer Ends */
 
 /* Subservice starts */
@@ -2648,7 +2636,6 @@ a {
   letter-spacing: 2px;
   color: var(--primary-color);
 }
-
 
 .subService-sect1-content {
   display: flex;
@@ -2745,7 +2732,6 @@ a {
   background: rgba(237, 237, 237, 1);
   overflow: hidden;
   position: relative;
-
 }
 
 .subservice-section3-bg {
@@ -2899,7 +2885,7 @@ a {
 
 .chooseus-desktop-img img {
   width: 100%;
-  height: 100%
+  height: 100%;
 }
 
 .sect4-list-header {
@@ -2935,12 +2921,16 @@ a {
   text-align: justify;
 }
 
-
-
 .subservice-section5 {
   width: 95%;
   margin: auto;
-  background: linear-gradient(114deg, rgba(27, 27, 27, 1) 25%, rgba(0, 0, 0, 1) 25%, rgba(0, 0, 0, 1) 39%, rgba(27, 27, 27, 1) 39%);
+  background: linear-gradient(
+    114deg,
+    rgba(27, 27, 27, 1) 25%,
+    rgba(0, 0, 0, 1) 25%,
+    rgba(0, 0, 0, 1) 39%,
+    rgba(27, 27, 27, 1) 39%
+  );
 }
 
 .subservice-section5-contact {
@@ -2978,7 +2968,6 @@ a {
   font-weight: 500;
   line-height: 50px;
   position: relative;
-
 }
 
 .section5-quotation1 {
@@ -2988,12 +2977,10 @@ a {
   left: -5%;
 }
 
-
 .section5-quotation {
   color: var(--primary-color);
   font-size: 50px;
 }
-
 
 .subservice-section5-subtag {
   width: 80%;
@@ -3009,94 +2996,92 @@ a {
 
 /* Subservice ends */
 
-
 /* Service landing page */
 
-.servicePage-main{
-  width:90%;
+.servicePage-main {
+  width: 90%;
   margin: 20px auto;
 }
 
 .servicePage-title h1 {
   font-size: 40px;
   font-family: var(--heading);
-  color:var(--primary-color);
-  letter-spacing:1px;
+  color: var(--primary-color);
+  letter-spacing: 1px;
   padding: 1rem 0;
 }
 
-.servicePage-descrip p{
-    font-size: 24px;
-    font-family: var(--content);
-    letter-spacing: 1px;
-    padding-bottom: 1rem;
-    line-height:40px;
-}
-.servicePage-service{
-  border-bottom: 3px solid var(--primary-color);
-  padding:2rem 0;
-}
-
-.servicePage-services-head h1{
-  font-size: 40px;
-    font-family: var(--heading);
-    color: var(--primary-color);
-    letter-spacing: 1px;
-    
-    position:relative;
-}
-.servicePage-services-head h1::before{
-content: "";
-position: absolute;
-height: 2px;
-width: 150px;
-background: var(--primary-color);
-bottom: 0;
-
-}
-.servicePage-services-descrip p{
-   font-size: 24px;
-    font-family: var(--content);
-    letter-spacing: 1px;
-    line-height:40px;
-    padding: 1rem 0;
-}
-
-.subserviceList-list-dot{
-font-weight: 800;
-font-size: 28px;
-}
-
-.servicePage-subserviceList-head h1{
-    font-size: 24px;
-    font-family: var(--heading);
-    letter-spacing: 1px;
-    padding-bottom: 1rem;
-    font-weight:800;
-}
-
-.servicePage-subserviceList-list{
-    padding-left: 3rem;
-}
-.servicePage-subserviceList-list p{
+.servicePage-descrip p {
   font-size: 24px;
-    font-family: var(--content);
-    letter-spacing: 1px;
-    padding-bottom: 1rem;
+  font-family: var(--content);
+  letter-spacing: 1px;
+  padding-bottom: 1rem;
+  line-height: 40px;
 }
-.servicePage-subserviceList-button p{
+.servicePage-service {
+  border-bottom: 3px solid var(--primary-color);
+  padding: 2rem 0;
+}
+
+.servicePage-services-head h1 {
+  font-size: 40px;
+  font-family: var(--heading);
+  color: var(--primary-color);
+  letter-spacing: 1px;
+
+  position: relative;
+}
+.servicePage-services-head h1::before {
+  content: "";
+  position: absolute;
+  height: 2px;
+  width: 150px;
+  background: var(--primary-color);
+  bottom: 0;
+}
+.servicePage-services-descrip p {
+  font-size: 24px;
+  font-family: var(--content);
+  letter-spacing: 1px;
+  line-height: 40px;
+  padding: 1rem 0;
+}
+
+.subserviceList-list-dot {
+  font-weight: 800;
+  font-size: 28px;
+}
+
+.servicePage-subserviceList-head h1 {
+  font-size: 24px;
+  font-family: var(--heading);
+  letter-spacing: 1px;
+  padding-bottom: 1rem;
+  font-weight: 800;
+}
+
+.servicePage-subserviceList-list {
+  padding-left: 3rem;
+}
+.servicePage-subserviceList-list p {
   font-size: 24px;
   font-family: var(--content);
   letter-spacing: 1px;
   padding-bottom: 1rem;
 }
-.subserviceList-button{
+.servicePage-subserviceList-button p {
+  font-size: 24px;
+  font-family: var(--content);
+  letter-spacing: 1px;
+  padding-bottom: 1rem;
+}
+.subserviceList-button {
   color: var(--primary-color);
   font-weight: 600;
   font-family: var(--heading);
-  cursor:pointer;
+  cursor: pointer;
 }
-.serviceLearnmore{
+.serviceLearnmore {
   font-weight: 600;
 }
 

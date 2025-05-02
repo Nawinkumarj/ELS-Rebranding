@@ -95,6 +95,7 @@ import fb from "./fb-footer.svg"
 import insta from "./insta-footer.svg";
 import twitter from "./twitter-footer.svg";
 import logoBranding from "./logo-branding.svg"
+import alzeimer from './alzeimer.jpg'
 
 export const assets = {
   logo,
@@ -175,4 +176,5 @@ export const assets = {
   aboutbg,
   navarrow,
   abt,
+  alzeimer,
 };

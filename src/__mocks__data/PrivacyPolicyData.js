@@ -220,8 +220,8 @@ const sections = [
     title: "How to Contact Us",
     content: `
        <div class="section-container">
-        <p class="section-intro"> If you have any questions or concerns regarding how we handle your personal data,  please contact us by email at <a href="mailto:info@exchangelegalservices.com" class="custom-link" target="_blank" rel="noopener noreferrer">
-            info@exchangelegalservices.com.
+        <p class="section-intro"> If you have any questions or concerns regarding how we handle your personal data,  please contact us by email at <a href="mailto:info@els.legal" class="custom-link" target="_blank" rel="noopener noreferrer">
+            info@els.legal.
           </a></p>
       </div>
     `,

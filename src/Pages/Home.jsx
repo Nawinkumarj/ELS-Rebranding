@@ -71,7 +71,7 @@ const Home = () => {
     },
     {
       image: assets.sample,
-      title: "Innovation and Creativity",
+      title: "Innovation and Creativity",  
       cardsClass: "card4",
     },
   ];
